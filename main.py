@@ -1,6 +1,7 @@
 import csv
 import random
 from datetime import date
+from typing import Optional
 from br import BibleReading as b_read
 from allwords import AllWords as aw
 today = date.today()
@@ -33,8 +34,8 @@ class MainHome():
             if self.first_con >= 1 and self.first_con <4:
                 self.second_condition()
             else:
-                pass
-                # print(f"My Apologies, {self.first_con} is invalid")
+                
+                print(f"My Apologies, {self.first_con} is invalid")
         
         except ValueError:
             print("")
@@ -47,6 +48,7 @@ class MainHome():
         print("[2] PARTIAL MATCH ONLY")
         print("[3] CASE SENSITIVE & PARTIAL MATCH")
         print("[4] IT DOESN'T MATTER. SEARCH IT NOW!")
+        print("")
         try:
             self.optional_condition = int(input("Enter the number: "))
         except ValueError:
@@ -59,15 +61,45 @@ class MainHome():
         print("")
         try:
             self.second_con = int(input("Enter the number: "))
+            #all words entire bible
             if self.first_con == 1 and self.second_con == 1:
                 self.third_condition()
                 if self.optional_condition == 4:
-                    #dito na tatawagin yung function
                     aw.all_words_entire_bible(self)
-            if self.second_con== 2:
-                pass
-            elif self.second_con == 3:
-                pass
+                elif self.optional_condition == 1:
+                    aw.all_words_entire_bible_case_sensitive(self)
+                elif self.optional_condition == 2:
+                    aw.all_words_entire_bible_partial_match(self)
+                elif self.optional_condition == 3:
+                    aw.all_words_entire_bible_cs_pm(self)
+                else:
+                    print(f"Im Sorry, {self.optional_condition} is not on the choices")
+            #all words old testament
+            elif self.second_con== 2 and self.first_con == 1:
+                self.third_condition()
+                if self.optional_condition == 4:
+                    aw.all_words_old_testament(self)
+                elif self.optional_condition == 1:
+                    aw.all_words_old_testament_case_sensitive(self)
+                elif self.optional_condition == 2:
+                    aw.all_words_old_testament_partial_match(self)
+                elif self.optional_condition == 3:
+                    aw.all_words_old_testament_bible_cs_pm(self)
+                else:
+                    print(f"Im Sorry, {self.optional_condition} is not on the choices")
+            #all words new testament
+            elif self.second_con == 3 and self.first_con == 1:
+                self.third_condition()
+                if self.optional_condition == 4:
+                    aw.all_words_new_testament(self)
+                elif self.optional_condition == 1:
+                    aw.all_words_new_testament_case_sensitive(self)
+                elif self.optional_condition == 2:
+                    aw.all_words_new_testament_partial_match(self)
+                elif self.optional_condition == 3:
+                    aw.all_words_new_testament_bible_cs_pm(self)
+                else:
+                    print(f"Im Sorry, {self.optional_condition} is not on the choices")
             elif self.second_con == 4:
                 print("")
                 print("OLD TESTAMENT")
@@ -83,27 +115,44 @@ class MainHome():
                 print("[50]Philippians  [51]Colossians  [52]1 Thessalonians  [53]2 Thessalonians  [54]1 Timothy  [55]2 Timothy  [56]Titus  [57]Philemon  [58]Hebrews  [59]James")
                 print("[60]1 Peter  [61]2 Peter  [62]1 John  [63]2 John  [64]3 John  [65]Jude  [66]Revelation")
                 print("")
-                specific_bible = int(input("Enter the number: "))
-                if specific_bible == 1 and self.first_con == 1:
-                    self.third_condition()
-                    if self.optional_condition == 4:
-                        aw.all_words_genesis(self)
-                    elif self.optional_condition ==  1:
-                        aw.all_words_genesis_case_sensitive(self)
-                    elif self.optional_condition ==  2:
-                        aw.all_words_genesis_partial_match(self)
-                    elif self.optional_condition ==  3:
-                        aw.all_words_genesis_bible_cs_pm(self)
+                try:
+                    self.specific_bible = int(input("Enter the number: "))
+                    #Genesis
+                    if self.specific_bible == 1 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_genesis(self)
+                        elif self.optional_condition ==  1:
+                            aw.all_words_genesis_case_sensitive(self)
+                        elif self.optional_condition ==  2:
+                            aw.all_words_genesis_partial_match(self)
+                        elif self.optional_condition ==  3:
+                            aw.all_words_genesis_bible_cs_pm(self)
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                    #Exodus
+                    elif self.specific_bible == 2 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_exodus(self)
+                        elif self.optional_condition ==  1:
+                            aw.all_words_exodus_case_sensitive(self)
+                        elif self.optional_condition ==  2:
+                            aw.all_words_exodus_partial_match(self)
+                        elif self.optional_condition ==  3:
+                            aw.all_words_exodus_bible_cs_pm(self)
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+
+
+
+                             
                     else:
-                        pass
-                elif specific_bible == 2 and self.first_con == 1:
-                    pass
-                else:
-                    pass
-            else:
-                pass
-                # print(f"My Apologies, {self.second_con} is invalid")
-        
+                        print(f"My Apologies, {self.specific_bible} is invalid")
+                except ValueError:
+                    print("")
+                    print("Ohh no! please be careful")
+            
         except ValueError:
             print("")
             print("Oops! be careful in typing")
