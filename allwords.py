@@ -2850,7 +2850,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
     #ALL WORDS DEUTERONOMY  NONE NONE
-    def all_words_numbers(self):
+    def all_words_deuteronomy(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> DEUTERONOMY ")
@@ -5778,11 +5778,11 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")   
 
-    #ALL WORDS 1 KINGS  NONE NONE
-    def all_words_1kings(self):
+    #ALL WORDS 2 KINGS  NONE NONE
+    def all_words_2kings(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 KINGS ")
+        print("ALL WORDS -> 2 KINGS ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5802,7 +5802,7 @@ class AllWords:
                     print("")
                     for every_line in csv_tagalog_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 12:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                     
@@ -5829,7 +5829,7 @@ class AllWords:
                     print("")
                     for every_line in csv_king_james_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 12:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
@@ -5856,7 +5856,7 @@ class AllWords:
                     print("")
                     for every_line in csv_asv_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 12:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
@@ -5884,10 +5884,10 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_1kings_case_sensitive(self):
+    def all_words_2kings_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 KINGS -> CASE SENSITIVE")
+        print("ALL WORDS -> 2 KINGS -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5907,7 +5907,7 @@ class AllWords:
                     print("")
                     for every_line in csv_tagalog_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 12:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
@@ -5933,7 +5933,7 @@ class AllWords:
                     print("")
                     for every_line in csv_king_james_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 12:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
@@ -5960,7 +5960,7 @@ class AllWords:
                     print("")
                     for every_line in csv_asv_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 12:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
@@ -6197,10 +6197,10 @@ class AllWords:
             print("Oops! be careful in typing")         
 
     #ALL WORDS 1 CHRONICLES  NONE NONE
-    def all_words_1kings(self):
+    def all_words_1chronicles(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 KINGS ")
+        print("ALL WORDS -> 1 CHRONICLES ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6220,7 +6220,7 @@ class AllWords:
                     print("")
                     for every_line in csv_tagalog_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                     
@@ -6247,7 +6247,7 @@ class AllWords:
                     print("")
                     for every_line in csv_king_james_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
@@ -6274,7 +6274,7 @@ class AllWords:
                     print("")
                     for every_line in csv_asv_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
@@ -6302,10 +6302,10 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_1kings_case_sensitive(self):
+    def all_words_1chronicles_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 KINGS -> CASE SENSITIVE")
+        print("ALL WORDS -> 1 CHRONICLES -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6325,7 +6325,7 @@ class AllWords:
                     print("")
                     for every_line in csv_tagalog_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
@@ -6351,7 +6351,7 @@ class AllWords:
                     print("")
                     for every_line in csv_king_james_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
@@ -6378,7 +6378,7 @@ class AllWords:
                     print("")
                     for every_line in csv_asv_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 11:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
@@ -6406,10 +6406,10 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_2kings_partial_match(self):
+    def all_words_1chronicles_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 KINGS -> PARTIAL MATCH")
+        print("ALL WORDS -> 1 CHRONICLES-> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6429,7 +6429,7 @@ class AllWords:
                     print("")
                     for every_line in csv_tagalog_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 12:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
@@ -6455,7 +6455,7 @@ class AllWords:
                     print("")
                     for every_line in csv_king_james_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 12:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
@@ -6482,7 +6482,7 @@ class AllWords:
                     print("")
                     for every_line in csv_asv_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 12:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
@@ -6510,10 +6510,10 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_2kings_bible_cs_pm(self):
+    def all_words_1chronicles_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 KINGS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("ALL WORDS -> 1 CHRONICLES -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6533,7 +6533,7 @@ class AllWords:
                     print("")
                     for every_line in csv_tagalog_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 12:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
@@ -6559,7 +6559,7 @@ class AllWords:
                     print("")
                     for every_line in csv_king_james_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 12:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
@@ -6586,7 +6586,7 @@ class AllWords:
                     print("")
                     for every_line in csv_asv_reader:
                         # -----------------------------------
-                        if int(every_line['Book Number']) == 12:
+                        if int(every_line['Book Number']) == 13:
                         # -----------------------------------
                             for word in every_line['Text'].split():
                                 if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):

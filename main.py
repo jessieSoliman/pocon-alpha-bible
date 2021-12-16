@@ -36,6 +36,7 @@ class MainHome():
             else:
                 
                 print(f"My Apologies, {self.first_con} is invalid")
+                self.home()
         
         except ValueError:
             print("")
@@ -66,40 +67,55 @@ class MainHome():
                 self.third_condition()
                 if self.optional_condition == 4:
                     aw.all_words_entire_bible(self)
+                    self.home()
                 elif self.optional_condition == 1:
                     aw.all_words_entire_bible_case_sensitive(self)
+                    self.home()
                 elif self.optional_condition == 2:
                     aw.all_words_entire_bible_partial_match(self)
+                    self.home()
                 elif self.optional_condition == 3:
                     aw.all_words_entire_bible_cs_pm(self)
+                    self.home()
                 else:
                     print(f"Im Sorry, {self.optional_condition} is not on the choices")
+                    self.home()
             #all words old testament
             elif self.second_con== 2 and self.first_con == 1:
                 self.third_condition()
                 if self.optional_condition == 4:
                     aw.all_words_old_testament(self)
+                    self.home()
                 elif self.optional_condition == 1:
                     aw.all_words_old_testament_case_sensitive(self)
+                    self.home()
                 elif self.optional_condition == 2:
                     aw.all_words_old_testament_partial_match(self)
+                    self.home()
                 elif self.optional_condition == 3:
                     aw.all_words_old_testament_bible_cs_pm(self)
+                    self.home()
                 else:
                     print(f"Im Sorry, {self.optional_condition} is not on the choices")
+                    self.home()
             #all words new testament
             elif self.second_con == 3 and self.first_con == 1:
                 self.third_condition()
                 if self.optional_condition == 4:
                     aw.all_words_new_testament(self)
+                    self.home()
                 elif self.optional_condition == 1:
                     aw.all_words_new_testament_case_sensitive(self)
+                    self.home()
                 elif self.optional_condition == 2:
                     aw.all_words_new_testament_partial_match(self)
+                    self.home()
                 elif self.optional_condition == 3:
                     aw.all_words_new_testament_bible_cs_pm(self)
+                    self.home()
                 else:
                     print(f"Im Sorry, {self.optional_condition} is not on the choices")
+                    self.home()
             elif self.second_con == 4:
                 print("")
                 print("OLD TESTAMENT")
@@ -122,37 +138,249 @@ class MainHome():
                         self.third_condition()
                         if self.optional_condition == 4:
                             aw.all_words_genesis(self)
+                            self.home()
                         elif self.optional_condition ==  1:
                             aw.all_words_genesis_case_sensitive(self)
+                            self.home()
                         elif self.optional_condition ==  2:
                             aw.all_words_genesis_partial_match(self)
+                            self.home()
                         elif self.optional_condition ==  3:
                             aw.all_words_genesis_bible_cs_pm(self)
+                            self.home()
                         else:
                             print(f"{self.optional_condition} is not on the list")
+                            self.home()
                     #Exodus
                     elif self.specific_bible == 2 and self.first_con == 1:
                         self.third_condition()
                         if self.optional_condition == 4:
                             aw.all_words_exodus(self)
+                            self.home()
                         elif self.optional_condition ==  1:
                             aw.all_words_exodus_case_sensitive(self)
+                            self.home()
                         elif self.optional_condition ==  2:
                             aw.all_words_exodus_partial_match(self)
+                            self.home()
                         elif self.optional_condition ==  3:
                             aw.all_words_exodus_bible_cs_pm(self)
+                            self.home()
                         else:
                             print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Leviticus
+                    elif self.specific_bible == 3 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_leviticus(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_leviticus_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_leviticus_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_leviticus_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Numbers
+                    elif self.specific_bible == 4 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_numbers(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_numbers_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_numbers_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_numbers_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Deuteronomy
+                    elif self.specific_bible == 5 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_deuteronomy(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_deuteronomy_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_deuteronomy_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_deuteronomy_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Joshua
+                    elif self.specific_bible == 6 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_joshua(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_joshua_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_joshua_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_joshua_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Judges
+                    elif self.specific_bible == 7 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_judges(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_judges_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_judges_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_judges_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Ruth
+                    elif self.specific_bible == 8 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_ruth(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_ruth_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_ruth_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_ruth_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #1 Samuel
+                    elif self.specific_bible == 9 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_1samuel(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_1samuel_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_1samuel_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_1samuel_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #2 Samuel
+                    elif self.specific_bible == 10 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_2samuel(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_2samuel_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_2samuel_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_2samuel_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #1 Kings
+                    elif self.specific_bible == 11 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_1kings(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_1kings_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_1kings_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_1kings_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #2 Kings
+                    elif self.specific_bible == 12 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_2kings(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_2kings_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_2kings_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_2kings_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #1 Chronicles
+                    elif self.specific_bible == 13 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_1chronicles(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_2kings_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_2kings_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_2kings_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+
 
 
 
                              
                     else:
                         print(f"My Apologies, {self.specific_bible} is invalid")
+                        self.home()
                 except ValueError:
                     print("")
                     print("Ohh no! please be careful")
-            
+            else:
+                print(f"We're sorry to inform you that {self.second_con} is invalid")
+                self.home()
         except ValueError:
             print("")
             print("Oops! be careful in typing")
@@ -192,6 +420,7 @@ class MainHome():
                         self.home()
                     else:
                         print(f"My Apologies, {user_exit} is invalid")
+                        self.home()
                 except ValueError:
                     print("")
                     print("Whoops! be careful in typing")
@@ -199,6 +428,7 @@ class MainHome():
             else:
                 print("")
                 print(f"Unfortunately, {user_choice} is invalid")
+                self.home()
                 
         except ValueError:
             print("")
