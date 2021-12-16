@@ -7449,6 +7449,4202 @@ class AllWords:
         except ValueError:
             print("")
             print("Oops! be careful in typing")  
+    
+    #ALL WORDS NEHEMIAH NONE NONE
+    def all_words_nehemiah(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> NEHEMIAH ")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                    
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                    
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                            else:
+                                continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")
+
+    def all_words_nehemiah_case_sensitive(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> NEHEMIAH -> CASE SENSITIVE")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")              
+
+    def all_words_nehemiah_partial_match(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> NEHEMIAH -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")    
+
+    def all_words_nehemiah_bible_cs_pm(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> NEHEMIAH -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 16:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")  
+
+    #ALL WORDS ESTHER NONE NONE
+    def all_words_esther(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ESTHER ")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                    
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                    
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                            else:
+                                continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")
+
+    def all_words_esther_case_sensitive(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ESTHER -> CASE SENSITIVE")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")              
+
+    def all_words_esther_partial_match(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ESTHER -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")    
+
+    def all_words_esther_bible_cs_pm(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ESTHER -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 17:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")  
+
+    #ALL WORDS JOB NONE NONE
+    def all_words_job(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> JOB ")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                    
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                    
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                            else:
+                                continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")
+
+    def all_words_job_case_sensitive(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> JOB -> CASE SENSITIVE")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")              
+
+    def all_words_job_partial_match(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> JOB -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")    
+
+    def all_words_job_bible_cs_pm(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> JOB -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 18:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")  
+    
+    #ALL WORDS PSALMS NONE NONE
+    def all_words_psalms(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> PSALMS ")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                    
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                    
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                            else:
+                                continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")
+
+    def all_words_psalms_case_sensitive(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> PSALMS -> CASE SENSITIVE")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")              
+
+    def all_words_psalms_partial_match(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> PSALMS -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")    
+
+    def all_words_psalms_bible_cs_pm(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> PSALMS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 19:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")  
+
+    #ALL WORDS PROVERBS NONE NONE
+    def all_words_proverbs(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> PROVERBS ")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                    
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                    
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                            else:
+                                continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")
+
+    def all_words_proverbs_case_sensitive(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> PROVERBS -> CASE SENSITIVE")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")              
+
+    def all_words_proverbs_partial_match(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> PROVERBS -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")    
+
+    def all_words_proverbs_bible_cs_pm(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> PROVERBS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 20:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")  
+
+    #ALL WORDS ECCLESIASTES NONE NONE
+    def all_words_ecclesiastes(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ECCLESIASTES ")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                    
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                    
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                            else:
+                                continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")
+
+    def all_words_ecclesiastes_case_sensitive(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ECCLESIASTES -> CASE SENSITIVE")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")              
+
+    def all_words_ecclesiastes_partial_match(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ECCLESIASTES-> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")    
+
+    def all_words_ecclesiastes_bible_cs_pm(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ECCLESIASTES -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 21:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")  
+
+
+    #ALL WORDS SONG OF SOLOMON NONE NONE
+    def all_words_song_of_solomon(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON ")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                    
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                    
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                            else:
+                                continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")
+
+    def all_words_song_of_solomon_case_sensitive(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")              
+
+    def all_words_song_of_solomon_partial_match(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")    
+
+    def all_words_song_of_solomon_bible_cs_pm(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")  
+
+    #ALL WORDS SONG OF SOLOMON NONE NONE
+    def all_words_song_of_solomon(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON ")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                    
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                    
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                            else:
+                                continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")
+
+    def all_words_song_of_solomon_case_sensitive(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")              
+
+    def all_words_song_of_solomon_partial_match(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")    
+
+    def all_words_song_of_solomon_bible_cs_pm(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")  
+
+    #ALL WORDS SONG OF SOLOMON NONE NONE
+    def all_words_song_of_solomon(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON ")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                    
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                    
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                            else:
+                                continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")
+
+    def all_words_song_of_solomon_case_sensitive(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")              
+
+    def all_words_song_of_solomon_partial_match(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")    
+
+    def all_words_song_of_solomon_bible_cs_pm(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 22:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")  
+
+    #ALL WORDS ISAIAH NONE NONE
+    def all_words_isaiah(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ISAIAH ")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                    
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                    
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                            else:
+                                continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.upper().strip(' ?;[]"<>.:,!‹›¶') == search_user_input.upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")
+
+    def all_words_isaiah_case_sensitive(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ISAIAH -> CASE SENSITIVE")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if word.strip(' ?;[]"<>.:,!‹›¶') == search_user_input:
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")              
+
+    def all_words_isaiah_partial_match(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ISAIAH -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")    
+
+    def all_words_isaiah_bible_cs_pm(self):
+        print("")
+        print("SEARCH CONDITIONS: ")
+        print("ALL WORDS -> ISAIAH -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("")
+        occurences_in_verse = 0
+        number_of_verse = 0
+        validate_item = []
+        search_user_input = input("What word do you want to find: ")
+        print("")
+        print("****CHOOSE THE BIBLE VERSION****")
+        print("[1] ANG DATING BIBLIA")
+        print("[2] AUTHORIZED KING JAMES VERSION")
+        print("[3] AMERICAN STANDARD VERSION") 
+        print("")
+        try:
+            search_user_version = int(input("Enter the number: "))
+            if search_user_version == 1:
+                with open('./csv-files/tagab.csv','r') as csv_tagalog_file: 
+                    csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
+                    print("")
+                    for every_line in csv_tagalog_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 2:
+                with open('./csv-files/kjv.csv','r') as csv_king_james_file:
+                    csv_king_james_reader = csv.DictReader(csv_king_james_file)
+                    print("")
+                    for every_line in csv_king_james_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            elif search_user_version == 3:    
+                with open('./csv-files/asv.csv','r') as csv_asv_file:
+                    csv_asv_reader = csv.DictReader(csv_asv_file)
+
+                    print("")
+                    for every_line in csv_asv_reader:
+                        # -----------------------------------
+                        if int(every_line['Book Number']) == 23:
+                        # -----------------------------------
+                            for word in every_line['Text'].split():
+                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
+                                    occurences_in_verse += 1
+                                    if every_line['Verse ID'] not in validate_item:
+                                        number_of_verse += 1
+                                        validate_item.append(every_line['Verse ID'])
+                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                        print(every_line['Text'])
+                                        
+                                else:
+                                    continue
+                print("")
+                if number_of_verse <= 1 and occurences_in_verse <= 1:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
+                elif number_of_verse <= 1 and occurences_in_verse >= 2:
+                    print(f"{number_of_verse} verse were found with {occurences_in_verse} matches")
+                else:
+                    print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
+            else:
+                print(f"My Apologies, {search_user_version} is invalid")
+
+
+        except ValueError:
+            print("")
+            print("Oops! be careful in typing")  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
 
 
 
