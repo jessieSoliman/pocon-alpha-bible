@@ -95,7 +95,7 @@ class AllWords:
                     print(f"{number_of_verse} verses were found with {occurences_in_verse} matches")
 
             else:
-                print(f"My Apologieseue, {search_user_version} is invalid")
+                print(f"My Apologies, {search_user_version} is invalid")
 
 
         except ValueError:

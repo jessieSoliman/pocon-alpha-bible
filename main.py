@@ -102,7 +102,7 @@ class MainHome():
                     pass
             else:
                 pass
-                # print(f"My Apologie, {self.second_con} is invalid")
+                # print(f"My Apologies, {self.second_con} is invalid")
         
         except ValueError:
             print("")
