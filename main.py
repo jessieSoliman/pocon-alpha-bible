@@ -356,18 +356,35 @@ class MainHome():
                             aw.all_words_1chronicles(self)
                             self.home()
                         elif self.optional_condition ==  1:
-                            aw.all_words_2kings_case_sensitive(self)
+                            aw.all_words_1chronicles_case_sensitive(self)
                             self.home()
                         elif self.optional_condition ==  2:
-                            aw.all_words_2kings_partial_match(self)
+                            aw.all_words_1chronicles_partial_match(self)
                             self.home()
                         elif self.optional_condition ==  3:
-                            aw.all_words_2kings_bible_cs_pm(self)
+                            aw.all_words_1chronicles_bible_cs_pm(self)
                             self.home()
                         else:
                             print(f"{self.optional_condition} is not on the list")
                             self.home()
-
+                    #2 Chronicles
+                    elif self.specific_bible == 13 and self.first_con == 1:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            aw.all_words_1chronicles(self)
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            aw.all_words_1chronicles_case_sensitive(self)
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            aw.all_words_1chronicles_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_1chronicles_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
 
 
 
