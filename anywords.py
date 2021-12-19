@@ -6,7 +6,7 @@ class AllWords:
         pass
     
     #ALL WORDS ENTIRE BIBLE NONE NONE
-    def all_words_entire_bible(self):
+    def any_words_entire_bible(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ENTIRE BIBLE ")
@@ -14,7 +14,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -102,7 +102,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_entire_bible_case_sensitive(self):
+    def any_words_entire_bible_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ENTIRE BIBLE -> CASE SENSITIVE")
@@ -110,7 +110,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -197,7 +197,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_entire_bible_partial_match(self):
+    def any_words_entire_bible_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ENTIRE BIBLE -> PARTIAL MATCH")
@@ -205,7 +205,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -292,7 +292,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_entire_bible_cs_pm(self):
+    def any_words_entire_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ENTIRE BIBLE -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -300,7 +300,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -388,7 +388,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
     #ALL WORDS OLD TESTAMENT NONE NONE
-    def all_words_old_testament(self):
+    def any_words_old_testament(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> OLD TESTAMENT ")
@@ -396,7 +396,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -487,7 +487,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_old_testament_case_sensitive(self):
+    def any_words_old_testament_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> OLD TESTAMENT -> CASE SENSITIVE")
@@ -495,7 +495,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -585,7 +585,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_old_testament_partial_match(self):
+    def any_words_old_testament_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> OLD TESTAMENT -> PARTIAL MATCH")
@@ -593,7 +593,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -683,7 +683,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_old_testament_bible_cs_pm(self):
+    def any_words_old_testament_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> OLD TESTAMENT -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -691,7 +691,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -782,7 +782,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
     #ALL WORDS NEW TESTAMENT NONE NONE
-    def all_words_new_testament(self):
+    def any_words_new_testament(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEW TESTAMENT ")
@@ -790,7 +790,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -881,7 +881,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_new_testament_case_sensitive(self):
+    def any_words_new_testament_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEW TESTAMENT -> CASE SENSITIVE")
@@ -889,7 +889,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -979,7 +979,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_new_testament_partial_match(self):
+    def any_words_new_testament_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEW TESTAMENT -> PARTIAL MATCH")
@@ -987,7 +987,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1077,7 +1077,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_new_testament_bible_cs_pm(self):
+    def any_words_new_testament_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEW TESTAMENT -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -1085,7 +1085,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1177,7 +1177,7 @@ class AllWords:
 
     
     #ALL WORDS GENESIS NONE NONE
-    def all_words_genesis(self):
+    def any_words_genesis(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> GENESIS ")
@@ -1185,7 +1185,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1282,7 +1282,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_genesis_case_sensitive(self):
+    def any_words_genesis_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> GENESIS -> CASE SENSITIVE")
@@ -1290,7 +1290,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1386,7 +1386,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_genesis_partial_match(self):
+    def any_words_genesis_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> GENESIS-> PARTIAL MATCH")
@@ -1394,7 +1394,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1490,7 +1490,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_genesis_bible_cs_pm(self):
+    def any_words_genesis_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> GENESIS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -1498,7 +1498,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1595,7 +1595,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
     #ALL WORDS EXODUS NONE NONE
-    def all_words_exodus(self):
+    def any_words_exodus(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EXODUS ")
@@ -1603,7 +1603,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1700,7 +1700,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_exodus_case_sensitive(self):
+    def any_words_exodus_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EXODUS -> CASE SENSITIVE")
@@ -1708,7 +1708,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1804,7 +1804,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_exodus_partial_match(self):
+    def any_words_exodus_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EXODUS -> PARTIAL MATCH")
@@ -1812,7 +1812,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1908,7 +1908,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_exodus_bible_cs_pm(self):
+    def any_words_exodus_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EXODUS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -1916,7 +1916,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2014,7 +2014,7 @@ class AllWords:
 
 
     #ALL WORDS LEVITICUS  NONE NONE
-    def all_words_leviticus(self):
+    def any_words_leviticus(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LEVITICUS ")
@@ -2022,7 +2022,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2119,7 +2119,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_leviticus_case_sensitive(self):
+    def any_words_leviticus_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LEVITICUS -> CASE SENSITIVE")
@@ -2127,7 +2127,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2223,7 +2223,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_leviticus_partial_match(self):
+    def any_words_leviticus_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LEVITICUS -> PARTIAL MATCH")
@@ -2231,7 +2231,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2327,7 +2327,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_leviticus_bible_cs_pm(self):
+    def any_words_leviticus_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LEVITICUS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -2335,7 +2335,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2432,7 +2432,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
     #ALL WORDS NUMBERS  NONE NONE
-    def all_words_numbers(self):
+    def any_words_numbers(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NUMBERS ")
@@ -2440,7 +2440,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2537,7 +2537,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_numbers_case_sensitive(self):
+    def any_words_numbers_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NUMBERS -> CASE SENSITIVE")
@@ -2545,7 +2545,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2641,7 +2641,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_numbers_partial_match(self):
+    def any_words_numbers_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NUMBERS -> PARTIAL MATCH")
@@ -2649,7 +2649,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2745,7 +2745,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_numbers_bible_cs_pm(self):
+    def any_words_numbers_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NUMBERS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -2753,7 +2753,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2850,7 +2850,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
     #ALL WORDS DEUTERONOMY  NONE NONE
-    def all_words_deuteronomy(self):
+    def any_words_deuteronomy(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> DEUTERONOMY ")
@@ -2858,7 +2858,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2955,7 +2955,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_deuteronomy_case_sensitive(self):
+    def any_words_deuteronomy_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> DEUTERONOMY -> CASE SENSITIVE")
@@ -2963,7 +2963,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3059,7 +3059,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_deuteronomy_partial_match(self):
+    def any_words_deuteronomy_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> DEUTERONOMY -> PARTIAL MATCH")
@@ -3067,7 +3067,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3163,7 +3163,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_deuteronomy_bible_cs_pm(self):
+    def any_words_deuteronomy_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> DEUTERONOMY -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -3171,7 +3171,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3268,7 +3268,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
     #ALL WORDS JOSHUA  NONE NONE
-    def all_words_joshua(self):
+    def any_words_joshua(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOSHUA ")
@@ -3276,7 +3276,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3373,7 +3373,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_joshua_case_sensitive(self):
+    def any_words_joshua_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOSHUA -> CASE SENSITIVE")
@@ -3381,7 +3381,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3477,7 +3477,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_joshua_partial_match(self):
+    def any_words_joshua_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOSHUA-> PARTIAL MATCH")
@@ -3485,7 +3485,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3581,7 +3581,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_joshua_bible_cs_pm(self):
+    def any_words_joshua_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOSHUA -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -3589,7 +3589,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3686,7 +3686,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
     #ALL WORDS JUDGES  NONE NONE
-    def all_words_judges(self):
+    def any_words_judges(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JUDGES ")
@@ -3694,7 +3694,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3791,7 +3791,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_judges_case_sensitive(self):
+    def any_words_judges_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JUDGES -> CASE SENSITIVE")
@@ -3799,7 +3799,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3895,7 +3895,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_judges_partial_match(self):
+    def any_words_judges_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JUDGES-> PARTIAL MATCH")
@@ -3903,7 +3903,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3999,7 +3999,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_judges_bible_cs_pm(self):
+    def any_words_judges_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JUDGES -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -4007,7 +4007,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4105,7 +4105,7 @@ class AllWords:
 
 
     #ALL WORDS RUTH  NONE NONE
-    def all_words_ruth(self):
+    def any_words_ruth(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> RUTH ")
@@ -4113,7 +4113,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4210,7 +4210,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_ruth_case_sensitive(self):
+    def any_words_ruth_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> RUTH -> CASE SENSITIVE")
@@ -4218,7 +4218,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4314,7 +4314,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_ruth_partial_match(self):
+    def any_words_ruth_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> RUTH -> PARTIAL MATCH")
@@ -4322,7 +4322,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4418,7 +4418,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_ruth_bible_cs_pm(self):
+    def any_words_ruth_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> RUTH -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -4426,7 +4426,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4524,7 +4524,7 @@ class AllWords:
 
 
     #ALL WORDS 1 SAMUEL  NONE NONE
-    def all_words_1samuel(self):
+    def any_words_1samuel(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 SAMUEL ")
@@ -4532,7 +4532,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4629,7 +4629,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_1samuel_case_sensitive(self):
+    def any_words_1samuel_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 SAMUEL -> CASE SENSITIVE")
@@ -4637,7 +4637,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4733,7 +4733,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_1samuel_partial_match(self):
+    def any_words_1samuel_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 SAMUEL -> PARTIAL MATCH")
@@ -4741,7 +4741,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4837,7 +4837,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_1samuel_bible_cs_pm(self):
+    def any_words_1samuel_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 SAMUEL -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -4845,7 +4845,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4942,7 +4942,7 @@ class AllWords:
             print("Oops! be careful in typing")
 
     #ALL WORDS 2 SAMUEL  NONE NONE
-    def all_words_2samuel(self):
+    def any_words_2samuel(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 SAMUEL ")
@@ -4950,7 +4950,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5047,7 +5047,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_2samuel_case_sensitive(self):
+    def any_words_2samuel_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 SAMUEL -> CASE SENSITIVE")
@@ -5055,7 +5055,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5151,7 +5151,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_2samuel_partial_match(self):
+    def any_words_2samuel_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 SAMUEL -> PARTIAL MATCH")
@@ -5159,7 +5159,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5255,7 +5255,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_2samuel_bible_cs_pm(self):
+    def any_words_2samuel_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 SAMUEL -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -5263,7 +5263,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5361,7 +5361,7 @@ class AllWords:
 
 
     #ALL WORDS 1 KINGS  NONE NONE
-    def all_words_1kings(self):
+    def any_words_1kings(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 KINGS ")
@@ -5369,7 +5369,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5466,7 +5466,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_1kings_case_sensitive(self):
+    def any_words_1kings_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 KINGS -> CASE SENSITIVE")
@@ -5474,7 +5474,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5570,7 +5570,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_1kings_partial_match(self):
+    def any_words_1kings_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 KINGS -> PARTIAL MATCH")
@@ -5578,7 +5578,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5674,7 +5674,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_1kings_bible_cs_pm(self):
+    def any_words_1kings_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 KINGS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -5682,7 +5682,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5779,7 +5779,7 @@ class AllWords:
             print("Oops! be careful in typing")   
 
     #ALL WORDS 2 KINGS  NONE NONE
-    def all_words_2kings(self):
+    def any_words_2kings(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 KINGS ")
@@ -5787,7 +5787,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5884,7 +5884,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_2kings_case_sensitive(self):
+    def any_words_2kings_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 KINGS -> CASE SENSITIVE")
@@ -5892,7 +5892,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5988,7 +5988,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_2kings_partial_match(self):
+    def any_words_2kings_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 KINGS -> PARTIAL MATCH")
@@ -5996,7 +5996,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6092,7 +6092,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_2kings_bible_cs_pm(self):
+    def any_words_2kings_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 KINGS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -6100,7 +6100,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6197,7 +6197,7 @@ class AllWords:
             print("Oops! be careful in typing")         
 
     #ALL WORDS 1 CHRONICLES  NONE NONE
-    def all_words_1chronicles(self):
+    def any_words_1chronicles(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 CHRONICLES ")
@@ -6205,7 +6205,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6302,7 +6302,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_1chronicles_case_sensitive(self):
+    def any_words_1chronicles_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 CHRONICLES -> CASE SENSITIVE")
@@ -6310,7 +6310,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6406,7 +6406,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_1chronicles_partial_match(self):
+    def any_words_1chronicles_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 CHRONICLES-> PARTIAL MATCH")
@@ -6414,7 +6414,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6510,7 +6510,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_1chronicles_bible_cs_pm(self):
+    def any_words_1chronicles_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 CHRONICLES -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -6518,7 +6518,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6615,7 +6615,7 @@ class AllWords:
             print("Oops! be careful in typing")   
 
     #ALL WORDS 2 CHRONICLES  NONE NONE
-    def all_words_2chronicles(self):
+    def any_words_2chronicles(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 CHRONICLES ")
@@ -6623,7 +6623,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6720,7 +6720,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_2chronicles_case_sensitive(self):
+    def any_words_2chronicles_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 CHRONICLES -> CASE SENSITIVE")
@@ -6728,7 +6728,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6824,7 +6824,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_2chronicles_partial_match(self):
+    def any_words_2chronicles_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 CHRONICLES-> PARTIAL MATCH")
@@ -6832,7 +6832,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6928,7 +6928,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_2chronicles_bible_cs_pm(self):
+    def any_words_2chronicles_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 CHRONICLES -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -6936,7 +6936,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7033,7 +7033,7 @@ class AllWords:
             print("Oops! be careful in typing")  
 
     #ALL WORDS EZRA NONE NONE
-    def all_words_ezra(self):
+    def any_words_ezra(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 CHRONICLES ")
@@ -7041,7 +7041,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7138,7 +7138,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_ezra_case_sensitive(self):
+    def any_words_ezra_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EZRA -> CASE SENSITIVE")
@@ -7146,7 +7146,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7242,7 +7242,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_ezra_partial_match(self):
+    def any_words_ezra_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EZRA -> PARTIAL MATCH")
@@ -7250,7 +7250,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7346,7 +7346,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_ezra_bible_cs_pm(self):
+    def any_words_ezra_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EZRA -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -7354,7 +7354,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7451,7 +7451,7 @@ class AllWords:
             print("Oops! be careful in typing")  
     
     #ALL WORDS NEHEMIAH NONE NONE
-    def all_words_nehemiah(self):
+    def any_words_nehemiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEHEMIAH ")
@@ -7459,7 +7459,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7556,7 +7556,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_nehemiah_case_sensitive(self):
+    def any_words_nehemiah_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEHEMIAH -> CASE SENSITIVE")
@@ -7564,7 +7564,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7660,7 +7660,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_nehemiah_partial_match(self):
+    def any_words_nehemiah_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEHEMIAH -> PARTIAL MATCH")
@@ -7668,7 +7668,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7764,7 +7764,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_nehemiah_bible_cs_pm(self):
+    def any_words_nehemiah_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEHEMIAH -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -7772,7 +7772,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7869,7 +7869,7 @@ class AllWords:
             print("Oops! be careful in typing")  
 
     #ALL WORDS ESTHER NONE NONE
-    def all_words_esther(self):
+    def any_words_esther(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ESTHER ")
@@ -7877,7 +7877,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7974,7 +7974,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_esther_case_sensitive(self):
+    def any_words_esther_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ESTHER -> CASE SENSITIVE")
@@ -7982,7 +7982,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8078,7 +8078,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_esther_partial_match(self):
+    def any_words_esther_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ESTHER -> PARTIAL MATCH")
@@ -8086,7 +8086,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8182,7 +8182,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_esther_bible_cs_pm(self):
+    def any_words_esther_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ESTHER -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -8190,7 +8190,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8287,7 +8287,7 @@ class AllWords:
             print("Oops! be careful in typing")  
 
     #ALL WORDS JOB NONE NONE
-    def all_words_job(self):
+    def any_words_job(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOB ")
@@ -8295,7 +8295,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8392,7 +8392,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_job_case_sensitive(self):
+    def any_words_job_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOB -> CASE SENSITIVE")
@@ -8400,7 +8400,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8496,7 +8496,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_job_partial_match(self):
+    def any_words_job_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOB -> PARTIAL MATCH")
@@ -8504,7 +8504,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8600,7 +8600,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_job_bible_cs_pm(self):
+    def any_words_job_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOB -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -8608,7 +8608,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8705,7 +8705,7 @@ class AllWords:
             print("Oops! be careful in typing")  
     
     #ALL WORDS PSALMS NONE NONE
-    def all_words_psalms(self):
+    def any_words_psalms(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PSALMS ")
@@ -8713,7 +8713,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8810,7 +8810,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_psalms_case_sensitive(self):
+    def any_words_psalms_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PSALMS -> CASE SENSITIVE")
@@ -8818,7 +8818,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8914,7 +8914,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_psalms_partial_match(self):
+    def any_words_psalms_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PSALMS -> PARTIAL MATCH")
@@ -8922,7 +8922,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9018,7 +9018,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_psalms_bible_cs_pm(self):
+    def any_words_psalms_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PSALMS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -9026,7 +9026,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9123,7 +9123,7 @@ class AllWords:
             print("Oops! be careful in typing")  
 
     #ALL WORDS PROVERBS NONE NONE
-    def all_words_proverbs(self):
+    def any_words_proverbs(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PROVERBS ")
@@ -9131,7 +9131,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9228,7 +9228,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_proverbs_case_sensitive(self):
+    def any_words_proverbs_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PROVERBS -> CASE SENSITIVE")
@@ -9236,7 +9236,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9332,7 +9332,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_proverbs_partial_match(self):
+    def any_words_proverbs_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PROVERBS -> PARTIAL MATCH")
@@ -9340,7 +9340,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9436,7 +9436,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_proverbs_bible_cs_pm(self):
+    def any_words_proverbs_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PROVERBS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -9444,7 +9444,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9541,7 +9541,7 @@ class AllWords:
             print("Oops! be careful in typing")  
 
     #ALL WORDS ECCLESIASTES NONE NONE
-    def all_words_ecclesiastes(self):
+    def any_words_ecclesiastes(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ECCLESIASTES ")
@@ -9549,7 +9549,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9646,7 +9646,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_ecclesiastes_case_sensitive(self):
+    def any_words_ecclesiastes_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ECCLESIASTES -> CASE SENSITIVE")
@@ -9654,7 +9654,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9750,7 +9750,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_ecclesiastes_partial_match(self):
+    def any_words_ecclesiastes_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ECCLESIASTES-> PARTIAL MATCH")
@@ -9758,7 +9758,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9854,7 +9854,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_ecclesiastes_bible_cs_pm(self):
+    def any_words_ecclesiastes_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ECCLESIASTES -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -9862,7 +9862,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9960,7 +9960,7 @@ class AllWords:
 
 
     #ALL WORDS SONG OF SOLOMON NONE NONE
-    def all_words_song_of_solomon(self):
+    def any_words_song_of_solomon(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> SONG OF SOLOMON ")
@@ -9968,7 +9968,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10065,7 +10065,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_song_of_solomon_case_sensitive(self):
+    def any_words_song_of_solomon_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE")
@@ -10073,7 +10073,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10169,7 +10169,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_song_of_solomon_partial_match(self):
+    def any_words_song_of_solomon_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> SONG OF SOLOMON -> PARTIAL MATCH")
@@ -10177,7 +10177,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10273,7 +10273,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_song_of_solomon_bible_cs_pm(self):
+    def any_words_song_of_solomon_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -10281,7 +10281,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10379,7 +10379,7 @@ class AllWords:
 
     
     #ALL WORDS ISAIAH NONE NONE
-    def all_words_isaiah(self):
+    def any_words_isaiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ISAIAH ")
@@ -10387,7 +10387,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10484,7 +10484,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_isaiah_case_sensitive(self):
+    def any_words_isaiah_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ISAIAH -> CASE SENSITIVE")
@@ -10492,7 +10492,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10588,7 +10588,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_isaiah_partial_match(self):
+    def any_words_isaiah_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ISAIAH -> PARTIAL MATCH")
@@ -10596,7 +10596,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10692,7 +10692,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_isaiah_bible_cs_pm(self):
+    def any_words_isaiah_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ISAIAH -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -10700,7 +10700,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10797,7 +10797,7 @@ class AllWords:
             print("Oops! be careful in typing")  
 
     #ALL WORDS JEREMIAH NONE NONE
-    def all_words_jeremiah(self):
+    def any_words_jeremiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JEREMIAH ")
@@ -10805,7 +10805,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10902,7 +10902,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_jeremiah_case_sensitive(self):
+    def any_words_jeremiah_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JEREMIAH -> CASE SENSITIVE")
@@ -10910,7 +10910,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11006,7 +11006,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_jeremiah_partial_match(self):
+    def any_words_jeremiah_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JEREMIAH -> PARTIAL MATCH")
@@ -11014,7 +11014,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11110,7 +11110,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_jeremiah_bible_cs_pm(self):
+    def any_words_jeremiah_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JEREMIAH -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -11118,7 +11118,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11219,7 +11219,7 @@ class AllWords:
     # NEW TESTAMENT
 
     #ALL WORDS MATTHEW NONE NONE
-    def all_words_matthew(self):
+    def any_words_matthew(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MATTHEW ")
@@ -11227,7 +11227,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11324,7 +11324,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_matthew_case_sensitive(self):
+    def any_words_matthew_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MATTHEW -> CASE SENSITIVE")
@@ -11332,7 +11332,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11428,7 +11428,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_matthew_partial_match(self):
+    def any_words_matthew_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MATTHEW -> PARTIAL MATCH")
@@ -11436,7 +11436,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11532,7 +11532,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_matthew_bible_cs_pm(self):
+    def any_words_matthew_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MATTHEW -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -11540,7 +11540,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11638,7 +11638,7 @@ class AllWords:
 
 
     #ALL WORDS MARK NONE NONE
-    def all_words_mark(self):
+    def any_words_mark(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MARK")
@@ -11646,7 +11646,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11743,7 +11743,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_mark_case_sensitive(self):
+    def any_words_mark_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MARK -> CASE SENSITIVE")
@@ -11751,7 +11751,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11847,7 +11847,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_mark_partial_match(self):
+    def any_words_mark_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MARK -> PARTIAL MATCH")
@@ -11855,7 +11855,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11951,7 +11951,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_mark_bible_cs_pm(self):
+    def any_words_mark_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MARK -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -11959,7 +11959,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12057,7 +12057,7 @@ class AllWords:
 
     
     #ALL WORDS LUKE NONE NONE
-    def all_words_luke(self):
+    def any_words_luke(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LUKE")
@@ -12065,7 +12065,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12162,7 +12162,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_luke_case_sensitive(self):
+    def any_words_luke_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LUKE -> CASE SENSITIVE")
@@ -12170,7 +12170,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12266,7 +12266,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_luke_partial_match(self):
+    def any_words_luke_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LUKE -> PARTIAL MATCH")
@@ -12274,7 +12274,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12370,7 +12370,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_luke_bible_cs_pm(self):
+    def any_words_luke_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LUKE -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -12378,7 +12378,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12475,7 +12475,7 @@ class AllWords:
             print("Oops! be careful in typing") 
 
     #ALL WORDS JOHN NONE NONE
-    def all_words_john(self):
+    def any_words_john(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOHN")
@@ -12483,7 +12483,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12580,7 +12580,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_john_case_sensitive(self):
+    def any_words_john_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOHN -> CASE SENSITIVE")
@@ -12588,7 +12588,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12684,7 +12684,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_john_partial_match(self):
+    def any_words_john_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOHN -> PARTIAL MATCH")
@@ -12692,7 +12692,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12788,7 +12788,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_john_bible_cs_pm(self):
+    def any_words_john_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOHN -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -12796,7 +12796,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the words you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
