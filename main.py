@@ -4,6 +4,7 @@ from datetime import date
 from typing import Optional
 from br import BibleReading as b_read
 from allwords import AllWords as aw
+from anywords import AnyWords as anw
 today = date.today()
 
 with open('./csv-files/tagab.csv','r') as csv_tagalog_file:
@@ -70,6 +71,24 @@ class MainHome():
                     self.home()
                 elif self.optional_condition == 1:
                     aw.all_words_entire_bible_case_sensitive(self)
+                    self.home()
+                elif self.optional_condition == 2:
+                    aw.all_words_entire_bible_partial_match(self)
+                    self.home()
+                elif self.optional_condition == 3:
+                    aw.all_words_entire_bible_cs_pm(self)
+                    self.home()
+                else:
+                    print(f"Im Sorry, {self.optional_condition} is not on the choices")
+                    self.home()
+            #any words entire bible
+            elif self.first_con == 2 and self.second_con == 1:
+                self.third_condition()
+                if self.optional_condition == 4:
+                    anw.any_words_entire_bible(self)
+                    self.home()
+                elif self.optional_condition == 1:
+                    anw.any_words_entire_bible_case_sensitive(self)
                     self.home()
                 elif self.optional_condition == 2:
                     aw.all_words_entire_bible_partial_match(self)
@@ -625,13 +644,13 @@ class MainHome():
                             self.home()
 
                     #John
-                    elif self.specific_bible == 43 and self.first_con == 1:
+                    elif self.specific_bible == 43 and self.first_con == 2:
                         self.third_condition()
                         if self.optional_condition == 4:
-                            aw.all_words_john(self)
+                            anw.any_words_john(self)
                             self.home()
                         elif self.optional_condition ==  1:
-                            aw.all_words_john_case_sensitive(self)
+                            anw.any_words_john_case_sensitive(self)
                             self.home()
                         elif self.optional_condition ==  2:
                             aw.all_words_john_partial_match(self)
