@@ -5,7 +5,7 @@ class AllWords:
     def __init__(self):
         pass
     
-    #ALL WORDS ENTIRE BIBLE NONE NONE
+    #ANY WORDS ENTIRE BIBLE NONE NONE
     def any_words_entire_bible(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -387,7 +387,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS OLD TESTAMENT NONE NONE
+    #ANY WORDS OLD TESTAMENT NONE NONE
     def any_words_old_testament(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -781,7 +781,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS NEW TESTAMENT NONE NONE
+    #ANY WORDS NEW TESTAMENT NONE NONE
     def any_words_new_testament(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -1176,7 +1176,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
     
-    #ALL WORDS GENESIS NONE NONE
+    #ANY WORDS GENESIS NONE NONE
     def any_words_genesis(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -1594,7 +1594,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS EXODUS NONE NONE
+    #ANY WORDS EXODUS NONE NONE
     def any_words_exodus(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -2013,7 +2013,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
 
-    #ALL WORDS LEVITICUS  NONE NONE
+    #ANY WORDS LEVITICUS  NONE NONE
     def any_words_leviticus(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -2431,7 +2431,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS NUMBERS  NONE NONE
+    #ANY WORDS NUMBERS  NONE NONE
     def any_words_numbers(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -2849,7 +2849,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS DEUTERONOMY  NONE NONE
+    #ANY WORDS DEUTERONOMY  NONE NONE
     def any_words_deuteronomy(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -3267,7 +3267,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS JOSHUA  NONE NONE
+    #ANY WORDS JOSHUA  NONE NONE
     def any_words_joshua(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -3685,7 +3685,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS JUDGES  NONE NONE
+    #ANY WORDS JUDGES  NONE NONE
     def any_words_judges(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -4104,7 +4104,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
 
-    #ALL WORDS RUTH  NONE NONE
+    #ANY WORDS RUTH  NONE NONE
     def any_words_ruth(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -4523,7 +4523,7 @@ class AllWords:
             print("Oops! be careful in typing")    
 
 
-    #ALL WORDS 1 SAMUEL  NONE NONE
+    #ANY WORDS 1 SAMUEL  NONE NONE
     def any_words_1samuel(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -4941,7 +4941,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    #ALL WORDS 2 SAMUEL  NONE NONE
+    #ANY WORDS 2 SAMUEL  NONE NONE
     def any_words_2samuel(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -5360,7 +5360,7 @@ class AllWords:
             print("Oops! be careful in typing")   
 
 
-    #ALL WORDS 1 KINGS  NONE NONE
+    #ANY WORDS 1 KINGS  NONE NONE
     def any_words_1kings(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -5778,7 +5778,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")   
 
-    #ALL WORDS 2 KINGS  NONE NONE
+    #ANY WORDS 2 KINGS  NONE NONE
     def any_words_2kings(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -6196,7 +6196,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")         
 
-    #ALL WORDS 1 CHRONICLES  NONE NONE
+    #ANY WORDS 1 CHRONICLES  NONE NONE
     def any_words_1chronicles(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -6614,7 +6614,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")   
 
-    #ALL WORDS 2 CHRONICLES  NONE NONE
+    #ANY WORDS 2 CHRONICLES  NONE NONE
     def any_words_2chronicles(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -7032,7 +7032,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS EZRA NONE NONE
+    #ANY WORDS EZRA NONE NONE
     def any_words_ezra(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -7450,7 +7450,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
     
-    #ALL WORDS NEHEMIAH NONE NONE
+    #ANY WORDS NEHEMIAH NONE NONE
     def any_words_nehemiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -7868,7 +7868,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS ESTHER NONE NONE
+    #ANY WORDS ESTHER NONE NONE
     def any_words_esther(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -8286,7 +8286,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS JOB NONE NONE
+    #ANY WORDS JOB NONE NONE
     def any_words_job(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -8704,7 +8704,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
     
-    #ALL WORDS PSALMS NONE NONE
+    #ANY WORDS PSALMS NONE NONE
     def any_words_psalms(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -9122,7 +9122,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS PROVERBS NONE NONE
+    #ANY WORDS PROVERBS NONE NONE
     def any_words_proverbs(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -9540,7 +9540,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS ECCLESIASTES NONE NONE
+    #ANY WORDS ECCLESIASTES NONE NONE
     def any_words_ecclesiastes(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -9959,7 +9959,7 @@ class AllWords:
             print("Oops! be careful in typing")  
 
 
-    #ALL WORDS SONG OF SOLOMON NONE NONE
+    #ANY WORDS SONG OF SOLOMON NONE NONE
     def any_words_song_of_solomon(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -10378,7 +10378,7 @@ class AllWords:
             print("Oops! be careful in typing")  
 
     
-    #ALL WORDS ISAIAH NONE NONE
+    #ANY WORDS ISAIAH NONE NONE
     def any_words_isaiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -10796,7 +10796,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS JEREMIAH NONE NONE
+    #ANY WORDS JEREMIAH NONE NONE
     def any_words_jeremiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -11218,7 +11218,7 @@ class AllWords:
 
     # NEW TESTAMENT
 
-    #ALL WORDS MATTHEW NONE NONE
+    #ANY WORDS MATTHEW NONE NONE
     def any_words_matthew(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -11637,7 +11637,7 @@ class AllWords:
             print("Oops! be careful in typing") 
 
 
-    #ALL WORDS MARK NONE NONE
+    #ANY WORDS MARK NONE NONE
     def any_words_mark(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -12056,7 +12056,7 @@ class AllWords:
             print("Oops! be careful in typing") 
 
     
-    #ALL WORDS LUKE NONE NONE
+    #ANY WORDS LUKE NONE NONE
     def any_words_luke(self):
         print("")
         print("SEARCH CONDITIONS: ")
@@ -12474,7 +12474,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing") 
 
-    #ALL WORDS JOHN NONE NONE
+    #ANY WORDS JOHN NONE NONE
     def any_words_john(self):
         print("")
         print("SEARCH CONDITIONS: ")
