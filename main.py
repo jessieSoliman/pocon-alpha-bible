@@ -653,7 +653,7 @@ class MainHome():
                             anw.any_words_john_case_sensitive(self)
                             self.home()
                         elif self.optional_condition ==  2:
-                            aw.all_words_john_partial_match(self)
+                            anw.any_words_john_partial_match(self)
                             self.home()
                         elif self.optional_condition ==  3:
                             aw.all_words_john_bible_cs_pm(self)
