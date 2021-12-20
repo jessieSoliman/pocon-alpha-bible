@@ -18,6 +18,7 @@ git clone git@github.com:prxncxss03/git@github.com:prxncxss03/pocon-alpha-bible.
   - All Words, Any Words, Phrase (Partial Match and Case Sensitive & Partial Match only)
   - Entire Bible, Old Testament, New Testament, Specific Book (Genesis - Jeremiah, Matthew - John)
   - Case Sensitive, Partial Match, Case Sensitive & Partial Match
+  - 3 bible  versions (AKJV, ASV, ADB)
   
 
 https://user-images.githubusercontent.com/84000523/146767336-bdb473e1-6e1d-4226-b5f5-7260e6b47373.mp4
