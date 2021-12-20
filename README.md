@@ -18,6 +18,12 @@ git clone git@github.com:prxncxss03/git@github.com:prxncxss03/pocon-alpha-bible.
   - All Words, Any Words, Phrase (Partial Match and Case Sensitive & Partial Match only)
   - Entire Bible, Old Testament, New Testament, Specific Book (Genesis - Jeremiah, Matthew - John)
   - Case Sensitive, Partial Match, Case Sensitive & Partial Match
+![gif1-2021-12-20_20 03 49](https://user-images.githubusercontent.com/84000523/146765118-52db9a7e-c80e-4d83-bd83-87dd262c2e2b.gif)
+![gif2-2021-12-20_20 06 21](https://user-images.githubusercontent.com/84000523/146765141-63076150-f599-42ce-a98f-25584988baa8.gif)
+![gif3-2021-12-20_20 09 57](https://user-images.githubusercontent.com/84000523/146766046-33f1a529-1ce0-4b6c-952a-6f5737347b7b.gif)
+
+
+
  ### Contribute :handshake:
 I have called it Alpha Bible version 1.0 because I am planning to improve it. I am planning to add a graphical user interface to it, add some useful features and also refactor my code in order for it to not to be too lengthy. If you are someone that wants to contribute just for fun or in the course of learning Python, I would be happy to collaborate with you.   
 Let's learn Python together :sunglasses:
