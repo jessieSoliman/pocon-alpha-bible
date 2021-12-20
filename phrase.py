@@ -14,7 +14,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -110,7 +110,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -205,7 +205,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -300,7 +300,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -396,7 +396,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -495,7 +495,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -593,7 +593,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -691,7 +691,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -790,7 +790,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -889,7 +889,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -987,7 +987,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1085,7 +1085,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1185,7 +1185,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1290,7 +1290,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1394,7 +1394,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1498,7 +1498,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1603,7 +1603,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1708,7 +1708,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1812,7 +1812,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1916,7 +1916,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2022,7 +2022,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2127,7 +2127,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2231,7 +2231,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2335,7 +2335,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2440,7 +2440,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2545,7 +2545,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2649,7 +2649,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2753,7 +2753,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2858,7 +2858,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2963,7 +2963,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3067,7 +3067,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3171,7 +3171,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3276,7 +3276,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3381,7 +3381,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3485,7 +3485,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3589,7 +3589,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3694,7 +3694,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3799,7 +3799,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3903,7 +3903,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4007,7 +4007,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4113,7 +4113,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4218,7 +4218,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4322,7 +4322,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4426,7 +4426,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4532,7 +4532,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4637,7 +4637,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4741,7 +4741,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4845,7 +4845,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4950,7 +4950,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5055,7 +5055,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5159,7 +5159,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5263,7 +5263,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5369,7 +5369,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5474,7 +5474,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5578,7 +5578,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5682,7 +5682,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5787,7 +5787,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5892,7 +5892,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5996,7 +5996,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6100,7 +6100,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6205,7 +6205,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6310,7 +6310,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6414,7 +6414,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6518,7 +6518,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6623,7 +6623,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6728,7 +6728,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6832,7 +6832,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6936,7 +6936,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7041,7 +7041,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7146,7 +7146,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7250,7 +7250,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7354,7 +7354,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7459,7 +7459,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7564,7 +7564,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7668,7 +7668,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7772,7 +7772,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7877,7 +7877,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7982,7 +7982,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8086,7 +8086,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8190,7 +8190,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8295,7 +8295,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8400,7 +8400,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8504,7 +8504,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8608,7 +8608,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8713,7 +8713,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8818,7 +8818,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8922,7 +8922,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9026,7 +9026,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9131,7 +9131,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9236,7 +9236,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9340,7 +9340,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9444,7 +9444,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9549,7 +9549,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9654,7 +9654,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9758,7 +9758,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9862,7 +9862,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9968,7 +9968,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10073,7 +10073,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10177,7 +10177,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10281,7 +10281,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10387,7 +10387,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10492,7 +10492,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10596,7 +10596,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10700,7 +10700,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10805,7 +10805,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10910,7 +10910,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11014,7 +11014,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11118,7 +11118,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11227,7 +11227,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11332,7 +11332,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11436,7 +11436,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11540,7 +11540,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11646,7 +11646,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11751,7 +11751,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11855,7 +11855,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11959,7 +11959,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12065,7 +12065,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12170,7 +12170,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12274,7 +12274,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12378,7 +12378,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12483,7 +12483,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12588,7 +12588,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12692,7 +12692,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12796,7 +12796,7 @@ class Phrase:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("What word do you want to find: ")
+        search_user_input = input("Enter the phrase that you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")

@@ -159,10 +159,11 @@ class MainHome():
                     self.home()
                 elif self.optional_condition == 1:
                     # p.phrase_old_testament_case_sensitive(self)
+                    print("Something went wrong.. Unfortunately, this feature is under maintainance")
                     self.home()
                 elif self.optional_condition == 2:
                     p.phrase_old_testament_partial_match(self)
-                    print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                   
                     self.home()
                 elif self.optional_condition == 3:
                     p.phrase_old_testament_bible_cs_pm(self)
