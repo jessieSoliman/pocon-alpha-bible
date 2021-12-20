@@ -1,10 +1,12 @@
 import csv
+from os import pardir
 import random
 from datetime import date
 from typing import Optional
 from br import BibleReading as b_read
 from allwords import AllWords as aw
 from anywords import AnyWords as anw
+from phrase import Phrase as p
 today = date.today()
 
 with open('./csv-files/tagab.csv','r') as csv_tagalog_file:
@@ -99,6 +101,26 @@ class MainHome():
                 else:
                     print(f"Im Sorry, {self.optional_condition} is not on the choices")
                     self.home()
+            #phrase entire bible
+            elif self.first_con == 3 and self.second_con == 1:
+                self.third_condition()
+                if self.optional_condition == 4:
+                    # p.phrase_entire_bible(self)
+                    print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                    self.home()
+                elif self.optional_condition == 1:
+                    # p.phrase_entire_bible_case_sensitive(self)
+                    print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                    self.home()
+                elif self.optional_condition == 2:
+                    p.phrase_entire_bible_partial_match(self)
+                    self.home()
+                elif self.optional_condition == 3:
+                    p.phrase_entire_bible_cs_pm(self)
+                    self.home()
+                else:
+                    print(f"Im Sorry, {self.optional_condition} is not on the choices")
+                    self.home()
             #all words old testament
             elif self.second_con== 2 and self.first_con == 1:
                 self.third_condition()
@@ -113,6 +135,26 @@ class MainHome():
                     self.home()
                 elif self.optional_condition == 3:
                     aw.all_words_old_testament_bible_cs_pm(self)
+                    self.home()
+                else:
+                    print(f"Im Sorry, {self.optional_condition} is not on the choices")
+                    self.home()
+            #phrase old testament
+            elif self.second_con== 2 and self.first_con == 3:
+                self.third_condition()
+                if self.optional_condition == 4:
+                    # p.phrase_old_testament(self)
+                    print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                    self.home()
+                elif self.optional_condition == 1:
+                    # p.phrase_old_testament_case_sensitive(self)
+                    self.home()
+                elif self.optional_condition == 2:
+                    p.phrase_old_testament_partial_match(self)
+                    print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                    self.home()
+                elif self.optional_condition == 3:
+                    p.phrase_old_testament_bible_cs_pm(self)
                     self.home()
                 else:
                     print(f"Im Sorry, {self.optional_condition} is not on the choices")
@@ -171,20 +213,40 @@ class MainHome():
                 else:
                     print(f"Im Sorry, {self.optional_condition} is not on the choices")
                     self.home()
+            #phrase new testament
+            elif self.second_con == 3 and self.first_con == 3:
+                self.third_condition()
+                if self.optional_condition == 4:
+                    # p.phrase_new_testament(self)
+                    print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                    self.home()
+                elif self.optional_condition == 1:
+                    # p.phrase_new_testament_case_sensitive(self)
+                    print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                    self.home()
+                elif self.optional_condition == 2:
+                    p.phrase_new_testament_partial_match(self)
+                    self.home()
+                elif self.optional_condition == 3:
+                    p.phrase_new_testament_bible_cs_pm(self)
+                    self.home()
+                else:
+                    print(f"Im Sorry, {self.optional_condition} is not on the choices")
+                    self.home()
             elif self.second_con == 4:
                 print("")
                 print("OLD TESTAMENT")
                 print("")
                 print("[1]Genesis   [2]Exodus  [3]Leviticus  [4]Numbers  [5]Deuteronomy  [6]Joshua  [7]Judges [8]Ruth  [9]1 Samuel  [10]2 Samuel")
                 print("[11]1 Kings  [12]2 Kings   [13]1 Chronicles   [14]2 Chronicles [15]Ezra  [16]Nehemiah  [17]Esther  [18]Job  [19]Psalms  [20]Proverbs  ")
-                print("[21]Ecclesiastes  [22]Song of Solomon  [23]Isaiah  [24]Jeremiah  [25]Lamentations  [26]Ezekiel [27]Daniel  [28]Hosea  [29]Joel  [30]Amos")
-                print("[31]Obadiah  [32]Jonah  [33]Micah  [34]Nahum  [35]Habakkuk  [36]Zephaniah  [37]Haggai  [38]Zechariah  [39]Malachi")
+                print("[21]Ecclesiastes  [22]Song of Solomon  [23]Isaiah  [24]Jeremiah  ")
                 print("")
                 print("NEW TESTAMENT")
                 print("")
-                print("[40]Matthew  [41]Mark  [42]Luke  [43]John  [44]Acts  [45]Romans  [46]1 Corinthians  [47]2 Corinthians  [48]Galatians  [49]Ephesians  ")
-                print("[50]Philippians  [51]Colossians  [52]1 Thessalonians  [53]2 Thessalonians  [54]1 Timothy  [55]2 Timothy  [56]Titus  [57]Philemon  [58]Hebrews  [59]James")
-                print("[60]1 Peter  [61]2 Peter  [62]1 John  [63]2 John  [64]3 John  [65]Jude  [66]Revelation")
+                print("[40]Matthew  [41]Mark  [42]Luke  [43]John ")
+                
+                print("")
+                print("NOTE: Currently, These are the  books that are available for searching but we are working to complete the 66 books!")
                 print("")
                 try:
                     self.specific_bible = int(input("Enter the number: "))
@@ -701,7 +763,7 @@ class MainHome():
                     #ANY WORDS
 
                     #Genesis
-                    if self.specific_bible == 1 and self.first_con == 2:
+                    elif self.specific_bible == 1 and self.first_con == 2:
                         self.third_condition()
                         if self.optional_condition == 4:
                             anw.any_words_genesis(self)
@@ -1209,6 +1271,575 @@ class MainHome():
                         else:
                             print(f"{self.optional_condition} is not on the list")
                             self.home()
+                    
+                    #PHRASE
+
+                    #Genesis
+                    elif self.specific_bible == 1 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            # p.phrase_genesis(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            # p.phrase_genesis_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_genesis_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_genesis_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Exodus
+                    elif self.specific_bible == 2 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            # p.phrase_exodus(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            # p.phrase_exodus_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_exodus_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_exodus_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Leviticus
+                    elif self.specific_bible == 3 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            # p.phrase_leviticus(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            # p.phrase_leviticus_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_leviticus_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_leviticus_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Numbers
+                    elif self.specific_bible == 4 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            # p.phrase_numbers(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            # p.phrase_numbers_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_numbers_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_numbers_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Deuteronomy
+                    elif self.specific_bible == 5 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            # p.phrase_deuteronomy(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            # p.phrase_deuteronomy_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_deuteronomy_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_deuteronomy_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Joshua
+                    elif self.specific_bible == 6 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            # p.phrase_joshua(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            # p.phrase_joshua_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_joshua_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_joshua_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Judges
+                    elif self.specific_bible == 7 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            # p.phrase_judges(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            # p.phrase_judges_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_judges_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_judges_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Ruth
+                    elif self.specific_bible == 8 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            # p.phrase_ruth(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_ruth_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_ruth_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_ruth_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #1 Samuel
+                    elif self.specific_bible == 9 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_1samuel(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_1samuel_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_1samuel_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_1samuel_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #2 Samuel
+                    elif self.specific_bible == 10 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_2samuel(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_2samuel_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_2samuel_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_2samuel_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #1 Kings
+                    elif self.specific_bible == 11 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_1kings(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_1kings_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_1kings_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_1kings_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #2 Kings
+                    elif self.specific_bible == 12 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_2kings(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_2kings_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_2kings_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_2kings_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #1 Chronicles
+                    elif self.specific_bible == 13 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_1chronicles(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_1chronicles_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_1chronicles_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_1chronicles_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #2 Chronicles
+                    elif self.specific_bible == 14 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_2chronicles(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_2chronicles_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_2chronicles_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_2chronicles_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Ezra
+                    elif self.specific_bible == 15 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_ezra(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_ezra_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_ezra_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_ezra_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Nehemiah
+                    elif self.specific_bible == 16 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_nehemiah(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_nehemiah_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_nehemiah_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_nehemiah_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Esther
+                    elif self.specific_bible == 17 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_esther(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_esther_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_esther_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_esther_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Job
+                    elif self.specific_bible == 18 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_job(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_job_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_job_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_job_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Psalms
+                    elif self.specific_bible == 19 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_psalms(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_psalms_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_psalms_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_psalms_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Proverbs
+                    elif self.specific_bible == 20 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_proverbs(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_proverbs_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_proverbs_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_proverbs_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Ecclesiastes
+                    elif self.specific_bible == 21 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_ecclesiastes(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_ecclesiastes_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_ecclesiastes_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_ecclesiastes_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Song of Solomon
+                    elif self.specific_bible == 22 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_song_of_solomon(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            # p.phrase_song_of_solomon_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_song_of_solomon_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_song_of_solomon_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Isaiah
+                    elif self.specific_bible == 23 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_isaiah(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_isaiah_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_isaiah_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_isaiah_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Jeremiah
+                    elif self.specific_bible == 24 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_jeremiah(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_jeremiah_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_jeremiah_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_jeremiah_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+
+                    #NEW TESTAMENT
+
+                    #Matthew
+                    elif self.specific_bible == 40 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_matthew(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_matthew_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_matthew_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_matthew_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+                    #Mark
+                    elif self.specific_bible == 41 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_mark(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_mark_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_mark_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            aw.all_words_mark_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+
+                    #Luke
+                    elif self.specific_bible == 42 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_luke(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_luke_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_luke_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_luke_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+
+                    #John
+                    elif self.specific_bible == 43 and self.first_con == 3:
+                        self.third_condition()
+                        if self.optional_condition == 4:
+                            #p.phrase_john(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  1:
+                            #p.phrase_john_case_sensitive(self)
+                            print("Something went wrong.. Unfortunately, this feature is under maintainance")
+                            self.home()
+                        elif self.optional_condition ==  2:
+                            p.phrase_john_partial_match(self)
+                            self.home()
+                        elif self.optional_condition ==  3:
+                            p.phrase_john_bible_cs_pm(self)
+                            self.home()
+                        else:
+                            print(f"{self.optional_condition} is not on the list")
+                            self.home()
+
 
 
 

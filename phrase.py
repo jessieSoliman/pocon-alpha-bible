@@ -9,7 +9,7 @@ class Phrase:
     def phrase_entire_bible(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ENTIRE BIBLE ")
+        print("PHRASE -> ENTIRE BIBLE ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -105,7 +105,7 @@ class Phrase:
     def phrase_entire_bible_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ENTIRE BIBLE -> CASE SENSITIVE")
+        print("PHRASE -> ENTIRE BIBLE -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -200,7 +200,7 @@ class Phrase:
     def phrase_entire_bible_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ENTIRE BIBLE -> PARTIAL MATCH")
+        print("PHRASE -> ENTIRE BIBLE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -295,7 +295,7 @@ class Phrase:
     def phrase_entire_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ENTIRE BIBLE -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> ENTIRE BIBLE -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -391,7 +391,7 @@ class Phrase:
     def phrase_old_testament(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> OLD TESTAMENT ")
+        print("PHRASE -> OLD TESTAMENT ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -490,7 +490,7 @@ class Phrase:
     def phrase_old_testament_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> OLD TESTAMENT -> CASE SENSITIVE")
+        print("PHRASE -> OLD TESTAMENT -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -588,7 +588,7 @@ class Phrase:
     def phrase_old_testament_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> OLD TESTAMENT -> PARTIAL MATCH")
+        print("PHRASE -> OLD TESTAMENT -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -686,7 +686,7 @@ class Phrase:
     def phrase_old_testament_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> OLD TESTAMENT -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> OLD TESTAMENT -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -785,7 +785,7 @@ class Phrase:
     def phrase_new_testament(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NEW TESTAMENT ")
+        print("PHRASE -> NEW TESTAMENT ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -884,7 +884,7 @@ class Phrase:
     def phrase_new_testament_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NEW TESTAMENT -> CASE SENSITIVE")
+        print("PHRASE -> NEW TESTAMENT -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -982,7 +982,7 @@ class Phrase:
     def phrase_new_testament_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NEW TESTAMENT -> PARTIAL MATCH")
+        print("PHRASE -> NEW TESTAMENT -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -1080,7 +1080,7 @@ class Phrase:
     def phrase_new_testament_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NEW TESTAMENT -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> NEW TESTAMENT -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -1180,7 +1180,7 @@ class Phrase:
     def phrase_genesis(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> GENESIS ")
+        print("PHRASE -> GENESIS ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -1285,7 +1285,7 @@ class Phrase:
     def phrase_genesis_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> GENESIS -> CASE SENSITIVE")
+        print("PHRASE -> GENESIS -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -1389,7 +1389,7 @@ class Phrase:
     def phrase_genesis_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> GENESIS-> PARTIAL MATCH")
+        print("PHRASE -> GENESIS-> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -1493,7 +1493,7 @@ class Phrase:
     def phrase_genesis_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> GENESIS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> GENESIS -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -1598,7 +1598,7 @@ class Phrase:
     def phrase_exodus(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> EXODUS ")
+        print("PHRASE -> EXODUS ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -1703,7 +1703,7 @@ class Phrase:
     def phrase_exodus_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> EXODUS -> CASE SENSITIVE")
+        print("PHRASE -> EXODUS -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -1807,7 +1807,7 @@ class Phrase:
     def phrase_exodus_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> EXODUS -> PARTIAL MATCH")
+        print("PHRASE -> EXODUS -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -1911,7 +1911,7 @@ class Phrase:
     def phrase_exodus_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> EXODUS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> EXODUS -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -2017,7 +2017,7 @@ class Phrase:
     def phrase_leviticus(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> LEVITICUS ")
+        print("PHRASE -> LEVITICUS ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -2122,7 +2122,7 @@ class Phrase:
     def phrase_leviticus_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> LEVITICUS -> CASE SENSITIVE")
+        print("PHRASE -> LEVITICUS -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -2226,7 +2226,7 @@ class Phrase:
     def phrase_leviticus_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> LEVITICUS -> PARTIAL MATCH")
+        print("PHRASE -> LEVITICUS -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -2330,7 +2330,7 @@ class Phrase:
     def phrase_leviticus_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> LEVITICUS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> LEVITICUS -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -2435,7 +2435,7 @@ class Phrase:
     def phrase_numbers(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NUMBERS ")
+        print("PHRASE -> NUMBERS ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -2540,7 +2540,7 @@ class Phrase:
     def phrase_numbers_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NUMBERS -> CASE SENSITIVE")
+        print("PHRASE -> NUMBERS -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -2644,7 +2644,7 @@ class Phrase:
     def phrase_numbers_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NUMBERS -> PARTIAL MATCH")
+        print("PHRASE -> NUMBERS -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -2748,7 +2748,7 @@ class Phrase:
     def phrase_numbers_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NUMBERS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> NUMBERS -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -2853,7 +2853,7 @@ class Phrase:
     def phrase_deuteronomy(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> DEUTERONOMY ")
+        print("PHRASE -> DEUTERONOMY ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -2958,7 +2958,7 @@ class Phrase:
     def phrase_deuteronomy_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> DEUTERONOMY -> CASE SENSITIVE")
+        print("PHRASE -> DEUTERONOMY -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -3062,7 +3062,7 @@ class Phrase:
     def phrase_deuteronomy_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> DEUTERONOMY -> PARTIAL MATCH")
+        print("PHRASE -> DEUTERONOMY -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -3166,7 +3166,7 @@ class Phrase:
     def phrase_deuteronomy_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> DEUTERONOMY -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> DEUTERONOMY -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -3271,7 +3271,7 @@ class Phrase:
     def phrase_joshua(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOSHUA ")
+        print("PHRASE -> JOSHUA ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -3376,7 +3376,7 @@ class Phrase:
     def phrase_joshua_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOSHUA -> CASE SENSITIVE")
+        print("PHRASE -> JOSHUA -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -3480,7 +3480,7 @@ class Phrase:
     def phrase_joshua_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOSHUA-> PARTIAL MATCH")
+        print("PHRASE -> JOSHUA-> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -3584,7 +3584,7 @@ class Phrase:
     def phrase_joshua_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOSHUA -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> JOSHUA -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -3689,7 +3689,7 @@ class Phrase:
     def phrase_judges(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JUDGES ")
+        print("PHRASE -> JUDGES ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -3794,7 +3794,7 @@ class Phrase:
     def phrase_judges_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JUDGES -> CASE SENSITIVE")
+        print("PHRASE -> JUDGES -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -3898,7 +3898,7 @@ class Phrase:
     def phrase_judges_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JUDGES-> PARTIAL MATCH")
+        print("PHRASE -> JUDGES-> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -4002,7 +4002,7 @@ class Phrase:
     def phrase_judges_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JUDGES -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> JUDGES -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -4108,7 +4108,7 @@ class Phrase:
     def phrase_ruth(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> RUTH ")
+        print("PHRASE -> RUTH ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -4213,7 +4213,7 @@ class Phrase:
     def phrase_ruth_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> RUTH -> CASE SENSITIVE")
+        print("PHRASE -> RUTH -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -4317,7 +4317,7 @@ class Phrase:
     def phrase_ruth_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> RUTH -> PARTIAL MATCH")
+        print("PHRASE -> RUTH -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -4421,7 +4421,7 @@ class Phrase:
     def phrase_ruth_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> RUTH -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> RUTH -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -4527,7 +4527,7 @@ class Phrase:
     def phrase_1samuel(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 SAMUEL ")
+        print("PHRASE -> 1 SAMUEL ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -4632,7 +4632,7 @@ class Phrase:
     def phrase_1samuel_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 SAMUEL -> CASE SENSITIVE")
+        print("PHRASE -> 1 SAMUEL -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -4736,7 +4736,7 @@ class Phrase:
     def phrase_1samuel_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 SAMUEL -> PARTIAL MATCH")
+        print("PHRASE -> 1 SAMUEL -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -4840,7 +4840,7 @@ class Phrase:
     def phrase_1samuel_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 SAMUEL -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> 1 SAMUEL -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -4945,7 +4945,7 @@ class Phrase:
     def phrase_2samuel(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 SAMUEL ")
+        print("PHRASE -> 2 SAMUEL ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5050,7 +5050,7 @@ class Phrase:
     def phrase_2samuel_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 SAMUEL -> CASE SENSITIVE")
+        print("PHRASE -> 2 SAMUEL -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5154,7 +5154,7 @@ class Phrase:
     def phrase_2samuel_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 SAMUEL -> PARTIAL MATCH")
+        print("PHRASE -> 2 SAMUEL -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5258,7 +5258,7 @@ class Phrase:
     def phrase_2samuel_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 SAMUEL -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> 2 SAMUEL -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5364,7 +5364,7 @@ class Phrase:
     def phrase_1kings(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 KINGS ")
+        print("PHRASE -> 1 KINGS ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5469,7 +5469,7 @@ class Phrase:
     def phrase_1kings_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 KINGS -> CASE SENSITIVE")
+        print("PHRASE -> 1 KINGS -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5573,7 +5573,7 @@ class Phrase:
     def phrase_1kings_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 KINGS -> PARTIAL MATCH")
+        print("PHRASE -> 1 KINGS -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5677,7 +5677,7 @@ class Phrase:
     def phrase_1kings_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 KINGS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> 1 KINGS -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5782,7 +5782,7 @@ class Phrase:
     def phrase_2kings(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 KINGS ")
+        print("PHRASE -> 2 KINGS ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5887,7 +5887,7 @@ class Phrase:
     def phrase_2kings_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 KINGS -> CASE SENSITIVE")
+        print("PHRASE -> 2 KINGS -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -5991,7 +5991,7 @@ class Phrase:
     def phrase_2kings_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 KINGS -> PARTIAL MATCH")
+        print("PHRASE -> 2 KINGS -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6095,7 +6095,7 @@ class Phrase:
     def phrase_2kings_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 KINGS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> 2 KINGS -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6200,7 +6200,7 @@ class Phrase:
     def phrase_1chronicles(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 CHRONICLES ")
+        print("PHRASE -> 1 CHRONICLES ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6305,7 +6305,7 @@ class Phrase:
     def phrase_1chronicles_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 CHRONICLES -> CASE SENSITIVE")
+        print("PHRASE -> 1 CHRONICLES -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6409,7 +6409,7 @@ class Phrase:
     def phrase_1chronicles_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 CHRONICLES-> PARTIAL MATCH")
+        print("PHRASE -> 1 CHRONICLES-> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6513,7 +6513,7 @@ class Phrase:
     def phrase_1chronicles_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 1 CHRONICLES -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> 1 CHRONICLES -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6618,7 +6618,7 @@ class Phrase:
     def phrase_2chronicles(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 CHRONICLES ")
+        print("PHRASE -> 2 CHRONICLES ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6723,7 +6723,7 @@ class Phrase:
     def phrase_2chronicles_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 CHRONICLES -> CASE SENSITIVE")
+        print("PHRASE -> 2 CHRONICLES -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6827,7 +6827,7 @@ class Phrase:
     def phrase_2chronicles_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 CHRONICLES-> PARTIAL MATCH")
+        print("PHRASE -> 2 CHRONICLES-> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -6931,7 +6931,7 @@ class Phrase:
     def phrase_2chronicles_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 CHRONICLES -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> 2 CHRONICLES -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -7036,7 +7036,7 @@ class Phrase:
     def phrase_ezra(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> 2 CHRONICLES ")
+        print("PHRASE -> 2 CHRONICLES ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -7141,7 +7141,7 @@ class Phrase:
     def phrase_ezra_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> EZRA -> CASE SENSITIVE")
+        print("PHRASE -> EZRA -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -7245,7 +7245,7 @@ class Phrase:
     def phrase_ezra_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> EZRA -> PARTIAL MATCH")
+        print("PHRASE -> EZRA -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -7349,7 +7349,7 @@ class Phrase:
     def phrase_ezra_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> EZRA -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> EZRA -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -7454,7 +7454,7 @@ class Phrase:
     def phrase_nehemiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NEHEMIAH ")
+        print("PHRASE -> NEHEMIAH ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -7559,7 +7559,7 @@ class Phrase:
     def phrase_nehemiah_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NEHEMIAH -> CASE SENSITIVE")
+        print("PHRASE -> NEHEMIAH -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -7663,7 +7663,7 @@ class Phrase:
     def phrase_nehemiah_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NEHEMIAH -> PARTIAL MATCH")
+        print("PHRASE -> NEHEMIAH -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -7767,7 +7767,7 @@ class Phrase:
     def phrase_nehemiah_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> NEHEMIAH -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> NEHEMIAH -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -7872,7 +7872,7 @@ class Phrase:
     def phrase_esther(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ESTHER ")
+        print("PHRASE -> ESTHER ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -7977,7 +7977,7 @@ class Phrase:
     def phrase_esther_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ESTHER -> CASE SENSITIVE")
+        print("PHRASE -> ESTHER -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -8081,7 +8081,7 @@ class Phrase:
     def phrase_esther_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ESTHER -> PARTIAL MATCH")
+        print("PHRASE -> ESTHER -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -8185,7 +8185,7 @@ class Phrase:
     def phrase_esther_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ESTHER -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> ESTHER -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -8290,7 +8290,7 @@ class Phrase:
     def phrase_job(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOB ")
+        print("PHRASE -> JOB ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -8395,7 +8395,7 @@ class Phrase:
     def phrase_job_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOB -> CASE SENSITIVE")
+        print("PHRASE -> JOB -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -8499,7 +8499,7 @@ class Phrase:
     def phrase_job_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOB -> PARTIAL MATCH")
+        print("PHRASE -> JOB -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -8603,7 +8603,7 @@ class Phrase:
     def phrase_job_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOB -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> JOB -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -8708,7 +8708,7 @@ class Phrase:
     def phrase_psalms(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> PSALMS ")
+        print("PHRASE -> PSALMS ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -8813,7 +8813,7 @@ class Phrase:
     def phrase_psalms_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> PSALMS -> CASE SENSITIVE")
+        print("PHRASE -> PSALMS -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -8917,7 +8917,7 @@ class Phrase:
     def phrase_psalms_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> PSALMS -> PARTIAL MATCH")
+        print("PHRASE -> PSALMS -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -9021,7 +9021,7 @@ class Phrase:
     def phrase_psalms_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> PSALMS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> PSALMS -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -9126,7 +9126,7 @@ class Phrase:
     def phrase_proverbs(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> PROVERBS ")
+        print("PHRASE -> PROVERBS ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -9231,7 +9231,7 @@ class Phrase:
     def phrase_proverbs_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> PROVERBS -> CASE SENSITIVE")
+        print("PHRASE -> PROVERBS -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -9335,7 +9335,7 @@ class Phrase:
     def phrase_proverbs_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> PROVERBS -> PARTIAL MATCH")
+        print("PHRASE -> PROVERBS -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -9439,7 +9439,7 @@ class Phrase:
     def phrase_proverbs_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> PROVERBS -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> PROVERBS -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -9544,7 +9544,7 @@ class Phrase:
     def phrase_ecclesiastes(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ECCLESIASTES ")
+        print("PHRASE -> ECCLESIASTES ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -9649,7 +9649,7 @@ class Phrase:
     def phrase_ecclesiastes_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ECCLESIASTES -> CASE SENSITIVE")
+        print("PHRASE -> ECCLESIASTES -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -9753,7 +9753,7 @@ class Phrase:
     def phrase_ecclesiastes_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ECCLESIASTES-> PARTIAL MATCH")
+        print("PHRASE -> ECCLESIASTES-> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -9857,7 +9857,7 @@ class Phrase:
     def phrase_ecclesiastes_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ECCLESIASTES -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> ECCLESIASTES -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -9963,7 +9963,7 @@ class Phrase:
     def phrase_song_of_solomon(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> SONG OF SOLOMON ")
+        print("PHRASE -> SONG OF SOLOMON ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -10068,7 +10068,7 @@ class Phrase:
     def phrase_song_of_solomon_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE")
+        print("PHRASE -> SONG OF SOLOMON -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -10172,7 +10172,7 @@ class Phrase:
     def phrase_song_of_solomon_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> SONG OF SOLOMON -> PARTIAL MATCH")
+        print("PHRASE -> SONG OF SOLOMON -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -10276,7 +10276,7 @@ class Phrase:
     def phrase_song_of_solomon_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> SONG OF SOLOMON -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -10382,7 +10382,7 @@ class Phrase:
     def phrase_isaiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ISAIAH ")
+        print("PHRASE -> ISAIAH ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -10487,7 +10487,7 @@ class Phrase:
     def phrase_isaiah_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ISAIAH -> CASE SENSITIVE")
+        print("PHRASE -> ISAIAH -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -10591,7 +10591,7 @@ class Phrase:
     def phrase_isaiah_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ISAIAH -> PARTIAL MATCH")
+        print("PHRASE -> ISAIAH -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -10695,7 +10695,7 @@ class Phrase:
     def phrase_isaiah_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> ISAIAH -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> ISAIAH -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -10800,7 +10800,7 @@ class Phrase:
     def phrase_jeremiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JEREMIAH ")
+        print("PHRASE -> JEREMIAH ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -10905,7 +10905,7 @@ class Phrase:
     def phrase_jeremiah_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JEREMIAH -> CASE SENSITIVE")
+        print("PHRASE -> JEREMIAH -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -11009,7 +11009,7 @@ class Phrase:
     def phrase_jeremiah_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JEREMIAH -> PARTIAL MATCH")
+        print("PHRASE -> JEREMIAH -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -11113,7 +11113,7 @@ class Phrase:
     def phrase_jeremiah_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JEREMIAH -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> JEREMIAH -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -11222,7 +11222,7 @@ class Phrase:
     def phrase_matthew(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> MATTHEW ")
+        print("PHRASE -> MATTHEW ")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -11327,7 +11327,7 @@ class Phrase:
     def phrase_matthew_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> MATTHEW -> CASE SENSITIVE")
+        print("PHRASE -> MATTHEW -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -11431,7 +11431,7 @@ class Phrase:
     def phrase_matthew_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> MATTHEW -> PARTIAL MATCH")
+        print("PHRASE -> MATTHEW -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -11535,7 +11535,7 @@ class Phrase:
     def phrase_matthew_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> MATTHEW -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> MATTHEW -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -11641,7 +11641,7 @@ class Phrase:
     def phrase_mark(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> MARK")
+        print("PHRASE -> MARK")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -11746,7 +11746,7 @@ class Phrase:
     def phrase_mark_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> MARK -> CASE SENSITIVE")
+        print("PHRASE -> MARK -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -11850,7 +11850,7 @@ class Phrase:
     def phrase_mark_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> MARK -> PARTIAL MATCH")
+        print("PHRASE -> MARK -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -11954,7 +11954,7 @@ class Phrase:
     def phrase_mark_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> MARK -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> MARK -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -12060,7 +12060,7 @@ class Phrase:
     def phrase_luke(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> LUKE")
+        print("PHRASE -> LUKE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -12165,7 +12165,7 @@ class Phrase:
     def phrase_luke_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> LUKE -> CASE SENSITIVE")
+        print("PHRASE -> LUKE -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -12269,7 +12269,7 @@ class Phrase:
     def phrase_luke_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> LUKE -> PARTIAL MATCH")
+        print("PHRASE -> LUKE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -12373,7 +12373,7 @@ class Phrase:
     def phrase_luke_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> LUKE -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> LUKE -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -12478,7 +12478,7 @@ class Phrase:
     def phrase_john(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOHN")
+        print("PHRASE -> JOHN")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -12583,7 +12583,7 @@ class Phrase:
     def phrase_john_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOHN -> CASE SENSITIVE")
+        print("PHRASE -> JOHN -> CASE SENSITIVE")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -12687,7 +12687,7 @@ class Phrase:
     def phrase_john_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOHN -> PARTIAL MATCH")
+        print("PHRASE -> JOHN -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -12791,7 +12791,7 @@ class Phrase:
     def phrase_john_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
-        print("ALL WORDS -> JOHN -> CASE SENSITIVE -> PARTIAL MATCH")
+        print("PHRASE -> JOHN -> CASE SENSITIVE -> PARTIAL MATCH")
         print("")
         occurences_in_verse = 0
         number_of_verse = 0
@@ -12895,4 +12895,4 @@ class Phrase:
 
 
 
-ol_words = AllWords()
+phrase_words = Phrase()
