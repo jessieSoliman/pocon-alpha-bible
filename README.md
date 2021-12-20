@@ -18,9 +18,19 @@ git clone git@github.com:prxncxss03/git@github.com:prxncxss03/pocon-alpha-bible.
   - All Words, Any Words, Phrase (Partial Match and Case Sensitive & Partial Match only)
   - Entire Bible, Old Testament, New Testament, Specific Book (Genesis - Jeremiah, Matthew - John)
   - Case Sensitive, Partial Match, Case Sensitive & Partial Match
-![gif1-2021-12-20_20 03 49](https://user-images.githubusercontent.com/84000523/146765118-52db9a7e-c80e-4d83-bd83-87dd262c2e2b.gif)
-![gif2-2021-12-20_20 06 21](https://user-images.githubusercontent.com/84000523/146765141-63076150-f599-42ce-a98f-25584988baa8.gif)
-![gif3-2021-12-20_20 09 57](https://user-images.githubusercontent.com/84000523/146766046-33f1a529-1ce0-4b6c-952a-6f5737347b7b.gif)
+  
+
+https://user-images.githubusercontent.com/84000523/146767336-bdb473e1-6e1d-4226-b5f5-7260e6b47373.mp4
+
+
+https://user-images.githubusercontent.com/84000523/146767411-3c18cd33-45e6-464d-ba95-981bfe457847.mp4
+
+
+
+
+https://user-images.githubusercontent.com/84000523/146767464-5a8d1fad-3675-4378-9acc-a41185480cf3.mp4
+
+
 
 
 
