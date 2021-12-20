@@ -1,3 +1,11 @@
+#ALPHA BIBLE v1.0
+#THIS WAS MADE BY PRINCESS EVANGELINE POCON BSIS-2
+#PROJECT IN DATA STRUCTURES AND ALGORITHMS
+#Note: the code was still messy because i am still learning python and this is my first time working with modules :'))
+#I know that my algorithm is not too efficient :')). 
+#I have also tried making a GUI but it was really hard but I would love to do it in the future.
+
+
 import csv
 from os import pardir
 import random
