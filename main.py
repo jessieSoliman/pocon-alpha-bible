@@ -17,6 +17,9 @@ from anywords import AnyWords as anw
 from phrase import Phrase as p
 today = date.today()
 
+print("ALPHA BIBLE v1.0")
+print("Created by: Princess Evangeline Pocon")
+print("")
 with open('./csv-files/tagab.csv','r') as csv_tagalog_file:
             csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
             selected_verses = ['23316','28752','28145','26712','29449','30170','29532','17022','11339','29747']
