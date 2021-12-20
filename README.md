@@ -1,16 +1,25 @@
-# ALPHA BIBLE
-## Table of Contents
-### Introduction
+# ALPHA BIBLE :open_book:
+## :page_facing_up: Table of Contents
+* Introduction
+* Installation
+* Features
+* Contribute
+### Introduction :clapper:
 Alpha Bible v1.0 was a Bible console version that was written in Python. It was inspired by the [Omega DigiBible](https://www.omegadigibible.com/) mobile application that was developed by [VSIONTEQ](https://vsionteq.com/). 
 This was created for compliance with our final project in Data Structures and Algorithms in [La Verdad Christian College Inc.](https://laverdad.edu.ph/) Sy 2021-2022.
-### Installation
-Open the terminal. If you’re using a Windows machine, you need to install git bash.
+### Installation :computer:
 ```
-git clone git@github.com:prxncxss03/dsa-bible-console.git
+git clone git@github.com:prxncxss03/git@github.com:prxncxss03/pocon-alpha-bible.git
 ```
+### Features :rocket:
+- Verse of the Day
+- Bible Reading
+- Search 
+  - All Words, Any Words, Phrase (Partial Match and Case Sensitive & Partial Match only)
+  - Entire Bible, Old Testament, New Testament, Specific Book (Genesis - Jeremiah, Matthew - John)
+  - Case Sensitive, Partial Match, Case Sensitive & Partial Match
+ ### Contribute :handshake:
+I have called it Alpha Bible version 1.0 because I am planning to improve it. I am planning to add a graphical user interface to it, add some useful features and also refactor my code in order for it to not to be too lengthy. If you are someone that wants to contribute just for fun or in the course of learning Python, I would be happy to collaborate with you.   
+Let's learn Python together :sunglasses:
 
 
-
-
-
-IT'S EITHER MATAPOS MO OR IKAW ANG MATAPOS :)
