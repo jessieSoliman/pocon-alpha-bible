@@ -16,7 +16,7 @@ Alpha Bible v1.0 was a Bible console version that was written in Python. It was 
 This was created for compliance with our final project in Data Structures and Algorithms in [La Verdad Christian College Inc.](https://laverdad.edu.ph/) Sy 2021-2022.
 ### Installation :computer:
 ```
-git clone git@github.com:prxncxss03/git@github.com:prxncxss03/pocon-alpha-bible.git
+git clone git@github.com:prxncxss03/pocon-alpha-bible.git
 ```
 ### Features :rocket:
 - Verse of the Day
