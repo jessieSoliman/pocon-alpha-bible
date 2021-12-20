@@ -1,12 +1,12 @@
 import csv
 
 
-class AllWords:
+class Phrase:
     def __init__(self):
         pass
     
-    #ALL WORDS ENTIRE BIBLE NONE NONE
-    def all_words_entire_bible(self):
+    #PHRASE ENTIRE BIBLE NONE NONE
+    def phrase_entire_bible(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ENTIRE BIBLE ")
@@ -14,7 +14,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -102,7 +102,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_entire_bible_case_sensitive(self):
+    def phrase_entire_bible_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ENTIRE BIBLE -> CASE SENSITIVE")
@@ -110,7 +110,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -197,7 +197,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_entire_bible_partial_match(self):
+    def phrase_entire_bible_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ENTIRE BIBLE -> PARTIAL MATCH")
@@ -205,7 +205,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -219,17 +219,17 @@ class AllWords:
                     csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
                     print("")
                     for every_line in csv_tagalog_reader:
-                        for word in every_line['Text'].split():
-                            if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                occurences_in_verse += 1
-                                if every_line['Verse ID'] not in validate_item:
-                                    number_of_verse += 1
-                                    validate_item.append(every_line['Verse ID'])
-                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                    print(every_line['Text'])
+            
+                        if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                            occurences_in_verse += 1
+                            if every_line['Verse ID'] not in validate_item:
+                                number_of_verse += 1
+                                validate_item.append(every_line['Verse ID'])
+                                print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                print(every_line['Text'])
                                     
-                            else:
-                                continue
+                        else:
+                            continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -242,17 +242,17 @@ class AllWords:
                     csv_king_james_reader = csv.DictReader(csv_king_james_file)
                     print("")
                     for every_line in csv_king_james_reader:
-                        for word in every_line['Text'].split():
-                            if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                occurences_in_verse += 1
-                                if every_line['Verse ID'] not in validate_item:
-                                    number_of_verse += 1
-                                    validate_item.append(every_line['Verse ID'])
-                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                    print(every_line['Text'])
+            
+                        if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                            occurences_in_verse += 1
+                            if every_line['Verse ID'] not in validate_item:
+                                number_of_verse += 1
+                                validate_item.append(every_line['Verse ID'])
+                                print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                print(every_line['Text'])
                                     
-                            else:
-                                continue
+                        else:
+                            continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -266,17 +266,17 @@ class AllWords:
 
                     print("")
                     for every_line in csv_asv_reader:
-                        for word in every_line['Text'].split():
-                            if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                occurences_in_verse += 1
-                                if every_line['Verse ID'] not in validate_item:
-                                    number_of_verse += 1
-                                    validate_item.append(every_line['Verse ID'])
-                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                    print(every_line['Text'])
+            
+                        if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                            occurences_in_verse += 1
+                            if every_line['Verse ID'] not in validate_item:
+                                number_of_verse += 1
+                                validate_item.append(every_line['Verse ID'])
+                                print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                print(every_line['Text'])
                                     
-                            else:
-                                continue
+                        else:
+                            continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -292,7 +292,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_entire_bible_cs_pm(self):
+    def phrase_entire_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ENTIRE BIBLE -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -300,7 +300,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -314,17 +314,17 @@ class AllWords:
                     csv_tagalog_reader = csv.DictReader(csv_tagalog_file)
                     print("")
                     for every_line in csv_tagalog_reader:
-                        for word in every_line['Text'].split():
-                            if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                occurences_in_verse += 1
-                                if every_line['Verse ID'] not in validate_item:
-                                    number_of_verse += 1
-                                    validate_item.append(every_line['Verse ID'])
-                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                    print(every_line['Text'])
+                        
+                        if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                            occurences_in_verse += 1
+                            if every_line['Verse ID'] not in validate_item:
+                                number_of_verse += 1
+                                validate_item.append(every_line['Verse ID'])
+                                print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                print(every_line['Text'])
                                     
-                            else:
-                                continue
+                        else:
+                            continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -337,17 +337,17 @@ class AllWords:
                     csv_king_james_reader = csv.DictReader(csv_king_james_file)
                     print("")
                     for every_line in csv_king_james_reader:
-                        for word in every_line['Text'].split():
-                            if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                occurences_in_verse += 1
-                                if every_line['Verse ID'] not in validate_item:
-                                    number_of_verse += 1
-                                    validate_item.append(every_line['Verse ID'])
-                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                    print(every_line['Text'])
+                        
+                        if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                            occurences_in_verse += 1
+                            if every_line['Verse ID'] not in validate_item:
+                                number_of_verse += 1
+                                validate_item.append(every_line['Verse ID'])
+                                print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                print(every_line['Text'])
                                     
-                            else:
-                                continue
+                        else:
+                            continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -361,17 +361,17 @@ class AllWords:
 
                     print("")
                     for every_line in csv_asv_reader:
-                        for word in every_line['Text'].split():
-                            if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                occurences_in_verse += 1
-                                if every_line['Verse ID'] not in validate_item:
-                                    number_of_verse += 1
-                                    validate_item.append(every_line['Verse ID'])
-                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                    print(every_line['Text'])
+                        
+                        if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                            occurences_in_verse += 1
+                            if every_line['Verse ID'] not in validate_item:
+                                number_of_verse += 1
+                                validate_item.append(every_line['Verse ID'])
+                                print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                print(every_line['Text'])
                                     
-                            else:
-                                continue
+                        else:
+                            continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -387,8 +387,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS OLD TESTAMENT NONE NONE
-    def all_words_old_testament(self):
+    #PHRASE OLD TESTAMENT NONE NONE
+    def phrase_old_testament(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> OLD TESTAMENT ")
@@ -396,7 +396,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -487,7 +487,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_old_testament_case_sensitive(self):
+    def phrase_old_testament_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> OLD TESTAMENT -> CASE SENSITIVE")
@@ -495,7 +495,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -585,7 +585,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_old_testament_partial_match(self):
+    def phrase_old_testament_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> OLD TESTAMENT -> PARTIAL MATCH")
@@ -593,7 +593,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -608,17 +608,17 @@ class AllWords:
                     print("")
                     for every_line in csv_tagalog_reader:
                         if int(every_line['Book Number']) >= 1 and int(every_line['Book Number']) <= 39:
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -632,17 +632,17 @@ class AllWords:
                     print("")
                     for every_line in csv_king_james_reader:
                         if int(every_line['Book Number']) >= 1 and int(every_line['Book Number']) <= 39:
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -657,17 +657,17 @@ class AllWords:
                     print("")
                     for every_line in csv_asv_reader:
                         if int(every_line['Book Number']) >= 1 and int(every_line['Book Number']) <= 39:
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -683,7 +683,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_old_testament_bible_cs_pm(self):
+    def phrase_old_testament_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> OLD TESTAMENT -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -691,7 +691,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -706,17 +706,17 @@ class AllWords:
                     print("")
                     for every_line in csv_tagalog_reader:
                         if int(every_line['Book Number']) >= 1 and int(every_line['Book Number']) <= 39:
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -730,17 +730,17 @@ class AllWords:
                     print("")
                     for every_line in csv_king_james_reader:
                         if int(every_line['Book Number']) >= 1 and int(every_line['Book Number']) <= 39:
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -755,17 +755,17 @@ class AllWords:
                     print("")
                     for every_line in csv_asv_reader:
                         if int(every_line['Book Number']) >= 1 and int(every_line['Book Number']) <= 39:
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -781,8 +781,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS NEW TESTAMENT NONE NONE
-    def all_words_new_testament(self):
+    #PHRASE NEW TESTAMENT NONE NONE
+    def phrase_new_testament(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEW TESTAMENT ")
@@ -790,7 +790,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -881,7 +881,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_new_testament_case_sensitive(self):
+    def phrase_new_testament_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEW TESTAMENT -> CASE SENSITIVE")
@@ -889,7 +889,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -979,7 +979,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_new_testament_partial_match(self):
+    def phrase_new_testament_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEW TESTAMENT -> PARTIAL MATCH")
@@ -987,7 +987,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1002,17 +1002,17 @@ class AllWords:
                     print("")
                     for every_line in csv_tagalog_reader:
                         if int(every_line['Book Number']) >= 40 and int(every_line['Book Number']) <= 66:
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1026,17 +1026,17 @@ class AllWords:
                     print("")
                     for every_line in csv_king_james_reader:
                         if int(every_line['Book Number']) >= 40 and int(every_line['Book Number']) <= 66:
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1051,17 +1051,17 @@ class AllWords:
                     print("")
                     for every_line in csv_asv_reader:
                         if int(every_line['Book Number']) >= 40 and int(every_line['Book Number']) <= 66:
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1077,7 +1077,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_new_testament_bible_cs_pm(self):
+    def phrase_new_testament_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEW TESTAMENT -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -1085,7 +1085,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1100,17 +1100,17 @@ class AllWords:
                     print("")
                     for every_line in csv_tagalog_reader:
                         if int(every_line['Book Number']) >= 40 and int(every_line['Book Number']) <= 66:
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1124,17 +1124,17 @@ class AllWords:
                     print("")
                     for every_line in csv_king_james_reader:
                         if int(every_line['Book Number']) >= 40 and int(every_line['Book Number']) <= 66:
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1149,17 +1149,17 @@ class AllWords:
                     print("")
                     for every_line in csv_asv_reader:
                         if int(every_line['Book Number']) >= 40 and int(every_line['Book Number']) <= 66:
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1176,8 +1176,8 @@ class AllWords:
             print("Oops! be careful in typing")    
 
     
-    #ALL WORDS GENESIS NONE NONE
-    def all_words_genesis(self):
+    #PHRASE GENESIS NONE NONE
+    def phrase_genesis(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> GENESIS ")
@@ -1185,7 +1185,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1282,7 +1282,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_genesis_case_sensitive(self):
+    def phrase_genesis_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> GENESIS -> CASE SENSITIVE")
@@ -1290,7 +1290,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1386,7 +1386,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_genesis_partial_match(self):
+    def phrase_genesis_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> GENESIS-> PARTIAL MATCH")
@@ -1394,7 +1394,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1411,17 +1411,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 1:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1437,17 +1437,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 1:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1464,17 +1464,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 1:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1490,7 +1490,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_genesis_bible_cs_pm(self):
+    def phrase_genesis_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> GENESIS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -1498,7 +1498,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1515,17 +1515,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 1:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1541,17 +1541,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 1:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1568,17 +1568,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 1:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1594,8 +1594,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS EXODUS NONE NONE
-    def all_words_exodus(self):
+    #PHRASE EXODUS NONE NONE
+    def phrase_exodus(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EXODUS ")
@@ -1603,7 +1603,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1700,7 +1700,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_exodus_case_sensitive(self):
+    def phrase_exodus_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EXODUS -> CASE SENSITIVE")
@@ -1708,7 +1708,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1804,7 +1804,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_exodus_partial_match(self):
+    def phrase_exodus_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EXODUS -> PARTIAL MATCH")
@@ -1812,7 +1812,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1829,17 +1829,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 2:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1855,17 +1855,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 2:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1882,17 +1882,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 2:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1908,7 +1908,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_exodus_bible_cs_pm(self):
+    def phrase_exodus_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EXODUS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -1916,7 +1916,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -1933,17 +1933,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 2:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1959,17 +1959,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 2:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -1986,17 +1986,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 2:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2013,8 +2013,8 @@ class AllWords:
             print("Oops! be careful in typing")    
 
 
-    #ALL WORDS LEVITICUS  NONE NONE
-    def all_words_leviticus(self):
+    #PHRASE LEVITICUS  NONE NONE
+    def phrase_leviticus(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LEVITICUS ")
@@ -2022,7 +2022,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2119,7 +2119,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_leviticus_case_sensitive(self):
+    def phrase_leviticus_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LEVITICUS -> CASE SENSITIVE")
@@ -2127,7 +2127,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2223,7 +2223,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_leviticus_partial_match(self):
+    def phrase_leviticus_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LEVITICUS -> PARTIAL MATCH")
@@ -2231,7 +2231,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2248,17 +2248,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 3:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2274,17 +2274,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 3:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2301,17 +2301,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 3:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2327,7 +2327,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_leviticus_bible_cs_pm(self):
+    def phrase_leviticus_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LEVITICUS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -2335,7 +2335,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2352,17 +2352,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 3:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2378,17 +2378,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 3:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2405,17 +2405,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 3:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2431,8 +2431,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS NUMBERS  NONE NONE
-    def all_words_numbers(self):
+    #PHRASE NUMBERS  NONE NONE
+    def phrase_numbers(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NUMBERS ")
@@ -2440,7 +2440,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2537,7 +2537,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_numbers_case_sensitive(self):
+    def phrase_numbers_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NUMBERS -> CASE SENSITIVE")
@@ -2545,7 +2545,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2641,7 +2641,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_numbers_partial_match(self):
+    def phrase_numbers_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NUMBERS -> PARTIAL MATCH")
@@ -2649,7 +2649,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2666,17 +2666,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 4:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2692,17 +2692,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 4:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2719,17 +2719,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 4:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2745,7 +2745,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_numbers_bible_cs_pm(self):
+    def phrase_numbers_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NUMBERS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -2753,7 +2753,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2770,17 +2770,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 4:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2796,17 +2796,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 4:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2823,17 +2823,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 4:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -2849,8 +2849,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS DEUTERONOMY  NONE NONE
-    def all_words_deuteronomy(self):
+    #PHRASE DEUTERONOMY  NONE NONE
+    def phrase_deuteronomy(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> DEUTERONOMY ")
@@ -2858,7 +2858,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -2955,7 +2955,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_deuteronomy_case_sensitive(self):
+    def phrase_deuteronomy_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> DEUTERONOMY -> CASE SENSITIVE")
@@ -2963,7 +2963,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3059,7 +3059,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_deuteronomy_partial_match(self):
+    def phrase_deuteronomy_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> DEUTERONOMY -> PARTIAL MATCH")
@@ -3067,7 +3067,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3084,17 +3084,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 5:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3110,17 +3110,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 5:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3137,17 +3137,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 5:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3163,7 +3163,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_deuteronomy_bible_cs_pm(self):
+    def phrase_deuteronomy_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> DEUTERONOMY -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -3171,7 +3171,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3188,17 +3188,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 5:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3214,17 +3214,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 5:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3241,17 +3241,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 5:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3267,8 +3267,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS JOSHUA  NONE NONE
-    def all_words_joshua(self):
+    #PHRASE JOSHUA  NONE NONE
+    def phrase_joshua(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOSHUA ")
@@ -3276,7 +3276,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3373,7 +3373,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_joshua_case_sensitive(self):
+    def phrase_joshua_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOSHUA -> CASE SENSITIVE")
@@ -3381,7 +3381,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3477,7 +3477,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_joshua_partial_match(self):
+    def phrase_joshua_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOSHUA-> PARTIAL MATCH")
@@ -3485,7 +3485,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3502,17 +3502,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 6:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3528,17 +3528,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 6:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3555,17 +3555,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 6:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3581,7 +3581,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_joshua_bible_cs_pm(self):
+    def phrase_joshua_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOSHUA -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -3589,7 +3589,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3606,17 +3606,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 6:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3632,17 +3632,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 6:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3659,17 +3659,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 6:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3685,8 +3685,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    #ALL WORDS JUDGES  NONE NONE
-    def all_words_judges(self):
+    #PHRASE JUDGES  NONE NONE
+    def phrase_judges(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JUDGES ")
@@ -3694,7 +3694,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3791,7 +3791,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_judges_case_sensitive(self):
+    def phrase_judges_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JUDGES -> CASE SENSITIVE")
@@ -3799,7 +3799,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3895,7 +3895,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_judges_partial_match(self):
+    def phrase_judges_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JUDGES-> PARTIAL MATCH")
@@ -3903,7 +3903,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -3920,17 +3920,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 7:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3946,17 +3946,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 7:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3973,17 +3973,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 7:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -3999,7 +3999,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_judges_bible_cs_pm(self):
+    def phrase_judges_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JUDGES -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -4007,7 +4007,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4024,17 +4024,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 7:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4050,17 +4050,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 7:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4077,17 +4077,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 7:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4104,8 +4104,8 @@ class AllWords:
             print("Oops! be careful in typing")    
 
 
-    #ALL WORDS RUTH  NONE NONE
-    def all_words_ruth(self):
+    #PHRASE RUTH  NONE NONE
+    def phrase_ruth(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> RUTH ")
@@ -4113,7 +4113,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4210,7 +4210,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_ruth_case_sensitive(self):
+    def phrase_ruth_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> RUTH -> CASE SENSITIVE")
@@ -4218,7 +4218,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4314,7 +4314,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_ruth_partial_match(self):
+    def phrase_ruth_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> RUTH -> PARTIAL MATCH")
@@ -4322,7 +4322,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4339,17 +4339,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 8:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4365,17 +4365,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 8:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4392,17 +4392,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 8:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4418,7 +4418,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_ruth_bible_cs_pm(self):
+    def phrase_ruth_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> RUTH -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -4426,7 +4426,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4443,17 +4443,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 8:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4469,17 +4469,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 8:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4496,17 +4496,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 8:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4523,8 +4523,8 @@ class AllWords:
             print("Oops! be careful in typing")    
 
 
-    #ALL WORDS 1 SAMUEL  NONE NONE
-    def all_words_1samuel(self):
+    #PHRASE 1 SAMUEL  NONE NONE
+    def phrase_1samuel(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 SAMUEL ")
@@ -4532,7 +4532,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4629,7 +4629,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_1samuel_case_sensitive(self):
+    def phrase_1samuel_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 SAMUEL -> CASE SENSITIVE")
@@ -4637,7 +4637,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4733,7 +4733,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_1samuel_partial_match(self):
+    def phrase_1samuel_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 SAMUEL -> PARTIAL MATCH")
@@ -4741,7 +4741,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4758,17 +4758,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 9:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4784,17 +4784,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 9:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4811,17 +4811,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 9:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4837,7 +4837,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_1samuel_bible_cs_pm(self):
+    def phrase_1samuel_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 SAMUEL -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -4845,7 +4845,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -4862,17 +4862,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 9:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4888,17 +4888,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 9:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4915,17 +4915,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 9:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -4941,8 +4941,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    #ALL WORDS 2 SAMUEL  NONE NONE
-    def all_words_2samuel(self):
+    #PHRASE 2 SAMUEL  NONE NONE
+    def phrase_2samuel(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 SAMUEL ")
@@ -4950,7 +4950,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5047,7 +5047,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_2samuel_case_sensitive(self):
+    def phrase_2samuel_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 SAMUEL -> CASE SENSITIVE")
@@ -5055,7 +5055,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5151,7 +5151,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_2samuel_partial_match(self):
+    def phrase_2samuel_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 SAMUEL -> PARTIAL MATCH")
@@ -5159,7 +5159,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5176,17 +5176,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 10:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5202,17 +5202,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 10:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5229,17 +5229,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 10:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5255,7 +5255,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_2samuel_bible_cs_pm(self):
+    def phrase_2samuel_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 SAMUEL -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -5263,7 +5263,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5280,17 +5280,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 10:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5306,17 +5306,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 10:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5333,17 +5333,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 10:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5360,8 +5360,8 @@ class AllWords:
             print("Oops! be careful in typing")   
 
 
-    #ALL WORDS 1 KINGS  NONE NONE
-    def all_words_1kings(self):
+    #PHRASE 1 KINGS  NONE NONE
+    def phrase_1kings(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 KINGS ")
@@ -5369,7 +5369,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5466,7 +5466,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_1kings_case_sensitive(self):
+    def phrase_1kings_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 KINGS -> CASE SENSITIVE")
@@ -5474,7 +5474,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5570,7 +5570,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_1kings_partial_match(self):
+    def phrase_1kings_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 KINGS -> PARTIAL MATCH")
@@ -5578,7 +5578,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5595,17 +5595,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 11:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5621,17 +5621,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 11:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5648,17 +5648,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 11:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5674,7 +5674,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_1kings_bible_cs_pm(self):
+    def phrase_1kings_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 KINGS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -5682,7 +5682,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5699,17 +5699,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 11:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5725,17 +5725,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 11:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5752,17 +5752,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 11:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -5778,8 +5778,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")   
 
-    #ALL WORDS 2 KINGS  NONE NONE
-    def all_words_2kings(self):
+    #PHRASE 2 KINGS  NONE NONE
+    def phrase_2kings(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 KINGS ")
@@ -5787,7 +5787,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5884,7 +5884,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_2kings_case_sensitive(self):
+    def phrase_2kings_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 KINGS -> CASE SENSITIVE")
@@ -5892,7 +5892,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -5988,7 +5988,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_2kings_partial_match(self):
+    def phrase_2kings_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 KINGS -> PARTIAL MATCH")
@@ -5996,7 +5996,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6013,17 +6013,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 12:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6039,17 +6039,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 12:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6066,17 +6066,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 12:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6092,7 +6092,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_2kings_bible_cs_pm(self):
+    def phrase_2kings_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 KINGS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -6100,7 +6100,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6117,17 +6117,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 12:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6143,17 +6143,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 12:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6170,17 +6170,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 12:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6196,8 +6196,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")         
 
-    #ALL WORDS 1 CHRONICLES  NONE NONE
-    def all_words_1chronicles(self):
+    #PHRASE 1 CHRONICLES  NONE NONE
+    def phrase_1chronicles(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 CHRONICLES ")
@@ -6205,7 +6205,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6302,7 +6302,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_1chronicles_case_sensitive(self):
+    def phrase_1chronicles_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 CHRONICLES -> CASE SENSITIVE")
@@ -6310,7 +6310,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6406,7 +6406,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_1chronicles_partial_match(self):
+    def phrase_1chronicles_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 CHRONICLES-> PARTIAL MATCH")
@@ -6414,7 +6414,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6431,17 +6431,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 13:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6457,17 +6457,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 13:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6484,17 +6484,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 13:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6510,7 +6510,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_1chronicles_bible_cs_pm(self):
+    def phrase_1chronicles_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 1 CHRONICLES -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -6518,7 +6518,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6535,17 +6535,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 13:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6561,17 +6561,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 13:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6588,17 +6588,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 13:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6614,8 +6614,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")   
 
-    #ALL WORDS 2 CHRONICLES  NONE NONE
-    def all_words_2chronicles(self):
+    #PHRASE 2 CHRONICLES  NONE NONE
+    def phrase_2chronicles(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 CHRONICLES ")
@@ -6623,7 +6623,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6720,7 +6720,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_2chronicles_case_sensitive(self):
+    def phrase_2chronicles_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 CHRONICLES -> CASE SENSITIVE")
@@ -6728,7 +6728,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6824,7 +6824,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_2chronicles_partial_match(self):
+    def phrase_2chronicles_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 CHRONICLES-> PARTIAL MATCH")
@@ -6832,7 +6832,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6849,17 +6849,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 14:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6875,17 +6875,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 14:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6902,17 +6902,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 14:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6928,7 +6928,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_2chronicles_bible_cs_pm(self):
+    def phrase_2chronicles_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 CHRONICLES -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -6936,7 +6936,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -6953,17 +6953,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 14:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -6979,17 +6979,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 14:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7006,17 +7006,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 14:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7032,8 +7032,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS EZRA NONE NONE
-    def all_words_ezra(self):
+    #PHRASE EZRA NONE NONE
+    def phrase_ezra(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> 2 CHRONICLES ")
@@ -7041,7 +7041,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7138,7 +7138,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_ezra_case_sensitive(self):
+    def phrase_ezra_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EZRA -> CASE SENSITIVE")
@@ -7146,7 +7146,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7242,7 +7242,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_ezra_partial_match(self):
+    def phrase_ezra_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EZRA -> PARTIAL MATCH")
@@ -7250,7 +7250,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7267,17 +7267,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 15:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7293,17 +7293,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 15:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7320,17 +7320,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 15:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7346,7 +7346,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_ezra_bible_cs_pm(self):
+    def phrase_ezra_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> EZRA -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -7354,7 +7354,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7371,17 +7371,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 15:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7397,17 +7397,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 15:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7424,17 +7424,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 15:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7450,8 +7450,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
     
-    #ALL WORDS NEHEMIAH NONE NONE
-    def all_words_nehemiah(self):
+    #PHRASE NEHEMIAH NONE NONE
+    def phrase_nehemiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEHEMIAH ")
@@ -7459,7 +7459,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7556,7 +7556,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_nehemiah_case_sensitive(self):
+    def phrase_nehemiah_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEHEMIAH -> CASE SENSITIVE")
@@ -7564,7 +7564,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7660,7 +7660,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_nehemiah_partial_match(self):
+    def phrase_nehemiah_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEHEMIAH -> PARTIAL MATCH")
@@ -7668,7 +7668,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7685,17 +7685,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 16:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7711,17 +7711,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 16:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7738,17 +7738,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 16:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7764,7 +7764,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_nehemiah_bible_cs_pm(self):
+    def phrase_nehemiah_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> NEHEMIAH -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -7772,7 +7772,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7789,17 +7789,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 16:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7815,17 +7815,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 16:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7842,17 +7842,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 16:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -7868,8 +7868,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS ESTHER NONE NONE
-    def all_words_esther(self):
+    #PHRASE ESTHER NONE NONE
+    def phrase_esther(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ESTHER ")
@@ -7877,7 +7877,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -7974,7 +7974,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_esther_case_sensitive(self):
+    def phrase_esther_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ESTHER -> CASE SENSITIVE")
@@ -7982,7 +7982,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8078,7 +8078,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_esther_partial_match(self):
+    def phrase_esther_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ESTHER -> PARTIAL MATCH")
@@ -8086,7 +8086,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8103,17 +8103,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 17:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8129,17 +8129,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 17:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8156,17 +8156,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 17:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8182,7 +8182,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_esther_bible_cs_pm(self):
+    def phrase_esther_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ESTHER -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -8190,7 +8190,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8207,17 +8207,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 17:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8233,17 +8233,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 17:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8260,17 +8260,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 17:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8286,8 +8286,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS JOB NONE NONE
-    def all_words_job(self):
+    #PHRASE JOB NONE NONE
+    def phrase_job(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOB ")
@@ -8295,7 +8295,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8392,7 +8392,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_job_case_sensitive(self):
+    def phrase_job_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOB -> CASE SENSITIVE")
@@ -8400,7 +8400,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8496,7 +8496,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_job_partial_match(self):
+    def phrase_job_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOB -> PARTIAL MATCH")
@@ -8504,7 +8504,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8521,17 +8521,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 18:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8547,17 +8547,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 18:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8574,17 +8574,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 18:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8600,7 +8600,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_job_bible_cs_pm(self):
+    def phrase_job_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOB -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -8608,7 +8608,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8625,17 +8625,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 18:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8651,17 +8651,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 18:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8678,17 +8678,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 18:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8704,8 +8704,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
     
-    #ALL WORDS PSALMS NONE NONE
-    def all_words_psalms(self):
+    #PHRASE PSALMS NONE NONE
+    def phrase_psalms(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PSALMS ")
@@ -8713,7 +8713,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8810,7 +8810,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_psalms_case_sensitive(self):
+    def phrase_psalms_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PSALMS -> CASE SENSITIVE")
@@ -8818,7 +8818,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8914,7 +8914,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_psalms_partial_match(self):
+    def phrase_psalms_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PSALMS -> PARTIAL MATCH")
@@ -8922,7 +8922,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -8939,17 +8939,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 19:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8965,17 +8965,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 19:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -8992,17 +8992,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 19:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9018,7 +9018,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_psalms_bible_cs_pm(self):
+    def phrase_psalms_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PSALMS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -9026,7 +9026,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9043,17 +9043,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 19:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9069,17 +9069,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 19:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9096,17 +9096,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 19:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9122,8 +9122,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS PROVERBS NONE NONE
-    def all_words_proverbs(self):
+    #PHRASE PROVERBS NONE NONE
+    def phrase_proverbs(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PROVERBS ")
@@ -9131,7 +9131,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9228,7 +9228,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_proverbs_case_sensitive(self):
+    def phrase_proverbs_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PROVERBS -> CASE SENSITIVE")
@@ -9236,7 +9236,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9332,7 +9332,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_proverbs_partial_match(self):
+    def phrase_proverbs_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PROVERBS -> PARTIAL MATCH")
@@ -9340,7 +9340,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9357,17 +9357,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 20:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9383,17 +9383,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 20:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9410,17 +9410,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 20:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9436,7 +9436,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_proverbs_bible_cs_pm(self):
+    def phrase_proverbs_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> PROVERBS -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -9444,7 +9444,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9461,17 +9461,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 20:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9487,17 +9487,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 20:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9514,17 +9514,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 20:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9540,8 +9540,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS ECCLESIASTES NONE NONE
-    def all_words_ecclesiastes(self):
+    #PHRASE ECCLESIASTES NONE NONE
+    def phrase_ecclesiastes(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ECCLESIASTES ")
@@ -9549,7 +9549,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9646,7 +9646,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_ecclesiastes_case_sensitive(self):
+    def phrase_ecclesiastes_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ECCLESIASTES -> CASE SENSITIVE")
@@ -9654,7 +9654,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9750,7 +9750,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_ecclesiastes_partial_match(self):
+    def phrase_ecclesiastes_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ECCLESIASTES-> PARTIAL MATCH")
@@ -9758,7 +9758,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9775,17 +9775,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 21:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9801,17 +9801,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 21:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9828,17 +9828,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 21:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9854,7 +9854,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_ecclesiastes_bible_cs_pm(self):
+    def phrase_ecclesiastes_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ECCLESIASTES -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -9862,7 +9862,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -9879,17 +9879,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 21:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9905,17 +9905,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 21:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9932,17 +9932,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 21:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -9959,8 +9959,8 @@ class AllWords:
             print("Oops! be careful in typing")  
 
 
-    #ALL WORDS SONG OF SOLOMON NONE NONE
-    def all_words_song_of_solomon(self):
+    #PHRASE SONG OF SOLOMON NONE NONE
+    def phrase_song_of_solomon(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> SONG OF SOLOMON ")
@@ -9968,7 +9968,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10065,7 +10065,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_song_of_solomon_case_sensitive(self):
+    def phrase_song_of_solomon_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE")
@@ -10073,7 +10073,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10169,7 +10169,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_song_of_solomon_partial_match(self):
+    def phrase_song_of_solomon_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> SONG OF SOLOMON -> PARTIAL MATCH")
@@ -10177,7 +10177,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10194,17 +10194,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 22:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10220,17 +10220,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 22:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10247,17 +10247,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 22:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10273,7 +10273,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_song_of_solomon_bible_cs_pm(self):
+    def phrase_song_of_solomon_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> SONG OF SOLOMON -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -10281,7 +10281,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10298,17 +10298,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 22:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10324,17 +10324,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 22:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10351,17 +10351,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 22:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10378,8 +10378,8 @@ class AllWords:
             print("Oops! be careful in typing")  
 
     
-    #ALL WORDS ISAIAH NONE NONE
-    def all_words_isaiah(self):
+    #PHRASE ISAIAH NONE NONE
+    def phrase_isaiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ISAIAH ")
@@ -10387,7 +10387,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10484,7 +10484,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_isaiah_case_sensitive(self):
+    def phrase_isaiah_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ISAIAH -> CASE SENSITIVE")
@@ -10492,7 +10492,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10588,7 +10588,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_isaiah_partial_match(self):
+    def phrase_isaiah_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ISAIAH -> PARTIAL MATCH")
@@ -10596,7 +10596,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10613,17 +10613,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 23:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10639,17 +10639,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 23:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10666,17 +10666,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 23:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10692,7 +10692,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_isaiah_bible_cs_pm(self):
+    def phrase_isaiah_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> ISAIAH -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -10700,7 +10700,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10717,17 +10717,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 23:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10743,17 +10743,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 23:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10770,17 +10770,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 23:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -10796,8 +10796,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")  
 
-    #ALL WORDS JEREMIAH NONE NONE
-    def all_words_jeremiah(self):
+    #PHRASE JEREMIAH NONE NONE
+    def phrase_jeremiah(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JEREMIAH ")
@@ -10805,7 +10805,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -10902,7 +10902,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_jeremiah_case_sensitive(self):
+    def phrase_jeremiah_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JEREMIAH -> CASE SENSITIVE")
@@ -10910,7 +10910,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11006,7 +11006,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_jeremiah_partial_match(self):
+    def phrase_jeremiah_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JEREMIAH -> PARTIAL MATCH")
@@ -11014,7 +11014,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11031,17 +11031,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 24:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11057,17 +11057,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 24:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11084,17 +11084,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 24:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11110,7 +11110,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_jeremiah_bible_cs_pm(self):
+    def phrase_jeremiah_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JEREMIAH -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -11118,7 +11118,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11135,17 +11135,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 24:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11161,17 +11161,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 24:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11188,17 +11188,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 24:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11218,8 +11218,8 @@ class AllWords:
 
     # NEW TESTAMENT
 
-    #ALL WORDS MATTHEW NONE NONE
-    def all_words_matthew(self):
+    #PHRASE MATTHEW NONE NONE
+    def phrase_matthew(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MATTHEW ")
@@ -11227,7 +11227,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11324,7 +11324,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_matthew_case_sensitive(self):
+    def phrase_matthew_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MATTHEW -> CASE SENSITIVE")
@@ -11332,7 +11332,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11428,7 +11428,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_matthew_partial_match(self):
+    def phrase_matthew_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MATTHEW -> PARTIAL MATCH")
@@ -11436,7 +11436,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11453,17 +11453,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 40:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11479,17 +11479,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 40:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11506,17 +11506,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 40:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11532,7 +11532,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_matthew_bible_cs_pm(self):
+    def phrase_matthew_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MATTHEW -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -11540,7 +11540,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11557,17 +11557,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 40:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11583,17 +11583,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 40:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11610,17 +11610,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 40:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11637,8 +11637,8 @@ class AllWords:
             print("Oops! be careful in typing") 
 
 
-    #ALL WORDS MARK NONE NONE
-    def all_words_mark(self):
+    #PHRASE MARK NONE NONE
+    def phrase_mark(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MARK")
@@ -11646,7 +11646,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11743,7 +11743,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_mark_case_sensitive(self):
+    def phrase_mark_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MARK -> CASE SENSITIVE")
@@ -11751,7 +11751,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11847,7 +11847,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_mark_partial_match(self):
+    def phrase_mark_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MARK -> PARTIAL MATCH")
@@ -11855,7 +11855,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11872,17 +11872,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 41:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11898,17 +11898,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 41:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11925,17 +11925,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 41:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -11951,7 +11951,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_mark_bible_cs_pm(self):
+    def phrase_mark_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> MARK -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -11959,7 +11959,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -11976,17 +11976,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 41:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12002,17 +12002,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 41:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12029,17 +12029,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 41:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12056,8 +12056,8 @@ class AllWords:
             print("Oops! be careful in typing") 
 
     
-    #ALL WORDS LUKE NONE NONE
-    def all_words_luke(self):
+    #PHRASE LUKE NONE NONE
+    def phrase_luke(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LUKE")
@@ -12065,7 +12065,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12162,7 +12162,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_luke_case_sensitive(self):
+    def phrase_luke_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LUKE -> CASE SENSITIVE")
@@ -12170,7 +12170,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12266,7 +12266,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_luke_partial_match(self):
+    def phrase_luke_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LUKE -> PARTIAL MATCH")
@@ -12274,7 +12274,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12291,17 +12291,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 42:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12317,17 +12317,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 42:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12344,17 +12344,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 42:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12370,7 +12370,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_luke_bible_cs_pm(self):
+    def phrase_luke_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> LUKE -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -12378,7 +12378,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12395,17 +12395,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 42:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12421,17 +12421,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 42:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12448,17 +12448,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 42:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12474,8 +12474,8 @@ class AllWords:
             print("")
             print("Oops! be careful in typing") 
 
-    #ALL WORDS JOHN NONE NONE
-    def all_words_john(self):
+    #PHRASE JOHN NONE NONE
+    def phrase_john(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOHN")
@@ -12483,7 +12483,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12580,7 +12580,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")
 
-    def all_words_john_case_sensitive(self):
+    def phrase_john_case_sensitive(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOHN -> CASE SENSITIVE")
@@ -12588,7 +12588,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12684,7 +12684,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")              
 
-    def all_words_john_partial_match(self):
+    def phrase_john_partial_match(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOHN -> PARTIAL MATCH")
@@ -12692,7 +12692,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12709,17 +12709,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 43:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12735,17 +12735,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 43:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12762,17 +12762,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 43:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input.upper() in word.strip(' ?;[]"<>.:,!‹›¶').upper():
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.upper().strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶').upper():
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12788,7 +12788,7 @@ class AllWords:
             print("")
             print("Oops! be careful in typing")    
 
-    def all_words_john_bible_cs_pm(self):
+    def phrase_john_bible_cs_pm(self):
         print("")
         print("SEARCH CONDITIONS: ")
         print("ALL WORDS -> JOHN -> CASE SENSITIVE -> PARTIAL MATCH")
@@ -12796,7 +12796,7 @@ class AllWords:
         occurences_in_verse = 0
         number_of_verse = 0
         validate_item = []
-        search_user_input = input("Enter the phrase that you want to find: ")
+        search_user_input = input("What word do you want to find: ")
         print("")
         print("****CHOOSE THE BIBLE VERSION****")
         print("[1] ANG DATING BIBLIA")
@@ -12813,17 +12813,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 43:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12839,17 +12839,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 43:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
@@ -12866,17 +12866,17 @@ class AllWords:
                         # -----------------------------------
                         if int(every_line['Book Number']) == 43:
                         # -----------------------------------
-                            for word in every_line['Text'].split():
-                                if search_user_input in word.strip(' ?;[]"<>.:,!‹›¶'):
-                                    occurences_in_verse += 1
-                                    if every_line['Verse ID'] not in validate_item:
-                                        number_of_verse += 1
-                                        validate_item.append(every_line['Verse ID'])
-                                        print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
-                                        print(every_line['Text'])
+                            
+                            if search_user_input.strip() in every_line['Text'].strip(' ?;[]"<>.:,!‹›¶'):
+                                occurences_in_verse += 1
+                                if every_line['Verse ID'] not in validate_item:
+                                    number_of_verse += 1
+                                    validate_item.append(every_line['Verse ID'])
+                                    print(every_line['Book Name'], every_line['Chapter'],":",every_line['Verse'])
+                                    print(every_line['Text'])
                                         
-                                else:
-                                    continue
+                            else:
+                                continue
                 print("")
                 if number_of_verse <= 1 and occurences_in_verse <= 1:
                     print(f"{number_of_verse} verse were found with {occurences_in_verse} match")
