@@ -21,6 +21,7 @@ git clone git@github.com:prxncxss03/pocon-alpha-bible.git
 ### Features :rocket:
 - Verse of the Day
 - Bible Reading
+  - 3 bible  versions (AKJV, ASV, ADB)
 - Search 
   - All Words, Any Words, Phrase (Partial Match and Case Sensitive & Partial Match only)
   - Entire Bible, Old Testament, New Testament, Specific Book (Genesis - Jeremiah, Matthew - John)
